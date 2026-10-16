@@ -1,6 +1,6 @@
 # InstaloaderSharp GUI
 
-A dark-mode Windows program for [InstaloaderSharp](https://github.com/InstaloaderSharp/InstaloaderSharp). It downloads pictures and videos along with their
+A Graphical User Interface program for [InstaloaderSharp](https://github.com/InstaloaderSharp/InstaloaderSharp). It downloads pictures and videos along with their
 captions and other metadata from Instagram: whole profiles, single posts, hashtags, locations, your feed, your
 saved posts, stories and highlights. It does this without a command line.
 
