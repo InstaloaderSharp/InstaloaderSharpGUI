@@ -79,7 +79,7 @@ namespace InstaloaderSharpGUI.UI
             foreach (var c in chunks)
             {
                 _history.Add(c);
-                _plain.Append(c.Value);
+                _plain.Append(c.Key);
             }
             if (_plain.Length > MaxChars)
             {
