@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaloaderSharpGUI", "InstaloaderSharpGUI\InstaloaderSharpGUI.csproj", "{67D8B35F-08C7-48C0-9852-4D071DA2331D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaloaderSharpGUI.Tests", "InstaloaderSharpGUI.Tests\InstaloaderSharpGUI.Tests.csproj", "{3BB729D4-4815-4104-9337-62C78521C8C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{67D8B35F-08C7-48C0-9852-4D071DA2331D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67D8B35F-08C7-48C0-9852-4D071DA2331D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D8B35F-08C7-48C0-9852-4D071DA2331D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB729D4-4815-4104-9337-62C78521C8C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB729D4-4815-4104-9337-62C78521C8C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB729D4-4815-4104-9337-62C78521C8C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB729D4-4815-4104-9337-62C78521C8C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
