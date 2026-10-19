@@ -174,6 +174,8 @@ namespace InstaloaderSharpGUI.Core
             if (ParseMaxConnectionAttempts(out err) < 0) r.Errors.Add(err);
             if (double.IsNaN(ParseRequestTimeout(out err))) r.Errors.Add(err);
             if (ParseAbortOn(out err) == null && err != null) r.Errors.Add(err);
+            err = ValidateSlide(Slide);
+            if (err != null) r.Errors.Add("Images of multi-image posts: " + err);
             err = ValidateFilter<Post>(PostFilter);
             if (err != null) r.Errors.Add("Post filter: " + err);
             err = ValidateFilter<StoryItem>(StoryitemFilter);
@@ -184,6 +186,44 @@ namespace InstaloaderSharpGUI.Core
                     r.Errors.Add("JSON target not found: " + t);
             }
             return r;
+        }
+
+        /// <summary>
+        /// Checks a --slide value the way Instaloader parses it ("2", "last", "2-4", "3-last"). Returns an error
+        /// message or null. (For text that is not a number, the library itself fails with a Python ValueError.)
+        /// </summary>
+        public static string ValidateSlide(string slide)
+        {
+            if (string.IsNullOrWhiteSpace(slide))
+                return null;
+            string[] parts = slide.Trim().Split('-');
+            int first, second;
+            Func<string, int?> number = s =>
+            {
+                int n;
+                return int.TryParse(s.Replace("_", ""), NumberStyles.Integer, CultureInfo.InvariantCulture, out n) ? n : (int?)null;
+            };
+            if (parts.Length == 1)
+            {
+                if (parts[0] == "last")
+                    return null;
+                if (number(parts[0]) == null)
+                    return "Invalid data for --slide parameter.";
+                return number(parts[0]) > 0 ? null : "--slide parameter must be greater than 0.";
+            }
+            if (parts.Length == 2 && number(parts[0]) != null)
+            {
+                first = number(parts[0]).Value;
+                if (parts[1] == "last")
+                    return null;
+                if (number(parts[1]) != null)
+                {
+                    second = number(parts[1]).Value;
+                    if (0 < first && first < second)
+                        return null;
+                }
+            }
+            return "Invalid data for --slide parameter.";
         }
 
         /// <summary>Compiles a filter expression with InstaloaderSharp's own parser. Returns an error message or null.</summary>
@@ -337,7 +377,10 @@ namespace InstaloaderSharpGUI.Core
 
             if (includeTargets && Targets.Count > 0)
             {
-                bool dashDash = false;
+                // "--latest-stamps" has an optional value: a target right after it would be read as the stamps file.
+                bool dashDash = a.Count > 0 && a[a.Count - 1] == "--latest-stamps";
+                if (dashDash)
+                    a.Add("--");
                 foreach (string t in Targets)
                 {
                     if (t.StartsWith("-") && !dashDash)
