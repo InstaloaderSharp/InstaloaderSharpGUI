@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
-  <assemblyIdentity version="1.0.0.0" name="InstaloaderSharpGUI.app"/>
+  <assemblyIdentity version="1.0.1.0" name="InstaloaderSharpGUI.app"/>
   <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
     <security>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -18,6 +18,9 @@
     <windowsSettings>
       <!-- System DPI aware: crisp text; all layout sizes are scaled by Theme.S() -->
       <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
+      <!-- Paths longer than 260 characters, if enabled in Windows (LongPathsEnabled). Same as InstaloaderSharp.exe's
+           manifest, which only applies when it is started itself, not when it is loaded as a library. -->
+      <longPathAware xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">true</longPathAware>
     </windowsSettings>
   </application>
 </assembly>
