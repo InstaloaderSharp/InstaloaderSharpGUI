@@ -156,6 +156,9 @@ namespace InstaloaderSharpGUI.Core
                 long? count = o.ParseCount(out err);
                 if (err != null)
                     throw new InvalidArgumentException(err);
+                err = JobOptions.ValidateSlide(o.Slide);
+                if (err != null)
+                    throw new InvalidArgumentException(err);
 
                 Instaloader loader = Library.CreateLoader(o);
                 try
