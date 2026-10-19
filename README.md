@@ -46,6 +46,7 @@ The repository expects a compiled `InstaloaderSharp.exe` in the `InstaloaderShar
 InstaloaderSharpGUI.sln
 InstaloaderSharp\InstaloaderSharp.exe      ← referenced as a library
 InstaloaderSharpGUI\                      ← the GUI project
+InstaloaderSharpGUI.Tests\                ← the unit tests
 ```
 
 Open `InstaloaderSharpGUI.sln` in Visual Studio (2015 or later) and build, or run:
@@ -61,6 +62,13 @@ The result is in `InstaloaderSharpGUI\bin\Release\`: `InstaloaderSharpGUI.exe` a
 
 To update InstaloaderSharp, replace `InstaloaderSharp\InstaloaderSharp.exe` and rebuild. A newer
 `InstaloaderSharp.exe` with the same API can also simply be copied over the one next to the GUI.
+
+The solution also contains the unit tests (`InstaloaderSharpGUI.Tests`), which need Visual Studio's MSTest
+framework; see [CONTRIBUTING.md](CONTRIBUTING.md#unit-tests). Without Visual Studio, build only the program
+with `InstaloaderSharpGUI\InstaloaderSharpGUI.csproj` instead of `InstaloaderSharpGUI.sln` in the command above.
+
+Found a bug or want to help? See [CONTRIBUTING.md](CONTRIBUTING.md), which also explains how to check whether a
+problem comes from the GUI or from InstaloaderSharp.
 
 ## Quick start
 

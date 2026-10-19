@@ -379,12 +379,17 @@ namespace InstaloaderSharpGUI.Core
 
         public static Dictionary<string, string> Load()
         {
+            return Load(FilePath);
+        }
+
+        internal static Dictionary<string, string> Load(string path)
+        {
             var d = new Dictionary<string, string>();
             try
             {
-                if (!File.Exists(FilePath))
+                if (!File.Exists(path))
                     return d;
-                foreach (string line in File.ReadAllLines(FilePath, Encoding.UTF8))
+                foreach (string line in File.ReadAllLines(path, Encoding.UTF8))
                 {
                     int eq = line.IndexOf('=');
                     if (eq <= 0 || line.StartsWith(";"))
@@ -400,14 +405,19 @@ namespace InstaloaderSharpGUI.Core
 
         public static void Save(Dictionary<string, string> d)
         {
+            Save(d, FilePath);
+        }
+
+        internal static void Save(Dictionary<string, string> d, string path)
+        {
             try
             {
-                Directory.CreateDirectory(Folder);
+                Directory.CreateDirectory(Path.GetDirectoryName(path));
                 var sb = new StringBuilder();
                 sb.AppendLine("; InstaloaderSharp GUI settings");
                 foreach (var kv in d.OrderBy(k => k.Key))
                     sb.Append(kv.Key).Append('=').AppendLine(Escape(kv.Value));
-                File.WriteAllText(FilePath, sb.ToString(), new UTF8Encoding(false));
+                File.WriteAllText(path, sb.ToString(), new UTF8Encoding(false));
             }
             catch (Exception)
             {

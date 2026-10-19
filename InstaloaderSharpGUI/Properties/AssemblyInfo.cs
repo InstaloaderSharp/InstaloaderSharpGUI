@@ -19,6 +19,9 @@ using System.Runtime.InteropServices;
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
+// The unit tests also test internal types
+[assembly: InternalsVisibleTo("InstaloaderSharpGUI.Tests")]
+
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("67d8b35f-08c7-48c0-9852-4d071da2331d")]
 
