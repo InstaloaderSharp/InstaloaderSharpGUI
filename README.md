@@ -19,7 +19,7 @@ advanced options.
 > Download the version listed above that has been tested for compatibility.
 
 > [!IMPORTANT]  
-> Only download later versions of InstaloaderSharp if you are experiencing problems.
+> Only download and test later versions of InstaloaderSharp if you are experiencing problems.
 
 * [Requirements and building](#requirements-and-building)
 * [Quick start](#quick-start)
