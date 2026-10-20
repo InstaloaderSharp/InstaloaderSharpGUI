@@ -187,7 +187,11 @@ namespace InstaloaderSharpGUI.Pages
                         if (p.IsVerified) d.Badges.Add("Verified");
                         if (p.IsPrivate) d.Badges.Add(p.FollowedByViewer ? "Private · you follow" : "Private");
                         if (p.IsBusinessAccount) d.Badges.Add(string.IsNullOrEmpty(p.BusinessCategoryName) ? "Business" : p.BusinessCategoryName);
-                        if (p.HasViewableStory) d.Badges.Add("Has story");
+                        Profile profile = p;
+                        string story = StoryBadge(loader.Context.IsLoggedIn,
+                                                  () => loader.GetStories(new List<long> { profile.Userid }).Sum(s => s.Itemcount),
+                                                  () => profile.HasPublicStory);
+                        if (story != null) d.Badges.Add(story);
                         if (loader.Context.IsLoggedIn && p.FollowsViewer) d.Badges.Add("Follows you");
                         d.Url = "https://www.instagram.com/" + p.Username + "/";
                         d.Picture = Library.DownloadImage(loader, p.ProfilePicUrl);
@@ -212,6 +216,32 @@ namespace InstaloaderSharpGUI.Pages
                     msg = "Instagram requires login for this. Sign in on the Account page. (" + msg + ")";
                 SetStatus(msg, Theme.Error, Glyphs.Error);
             });
+        }
+
+        /// <summary>
+        /// Badge text for a profile's current story, or null when there is none (or it cannot be determined).
+        /// Signed in, the story is fetched the same way a download does, so the badge only appears when there is
+        /// something to download. Profile.HasViewableStory is not used: it is true for every followed account.
+        /// Anonymously, Instagram only says whether there is a public story; downloading it requires login.
+        /// </summary>
+        internal static string StoryBadge(bool loggedIn, Func<int> currentStoryItems, Func<bool> hasPublicStory)
+        {
+            try
+            {
+                if (loggedIn)
+                {
+                    int items = currentStoryItems();
+                    if (items <= 0)
+                        return null;
+                    return items == 1 ? "Story · 1 item" : string.Format("Story · {0} items", items);
+                }
+                return hasPublicStory() ? "Has story · sign in to download" : null;
+            }
+            catch (Exception)
+            {
+                // e.g. rate limited: rather show no badge than a wrong one
+                return null;
+            }
         }
 
         private sealed class SearchItem

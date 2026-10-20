@@ -349,6 +349,28 @@ namespace InstaloaderSharpGUI.Tests
             });
         }
 
+        [TestMethod]
+        public void StoryBadgeOnlyForACurrentStory()
+        {
+            Func<bool> notAskedPublic = () => { Assert.Fail("signed in, the public flag must not be used"); return true; };
+            Func<int> notAskedItems = () => { Assert.Fail("anonymous, stories cannot be fetched"); return 0; };
+
+            // Regression: following an account used to show "Has story" even without a story.
+            Assert.IsNull(LookupPage.StoryBadge(true, () => 0, notAskedPublic));
+            Assert.AreEqual("Story · 1 item", LookupPage.StoryBadge(true, () => 1, notAskedPublic));
+            Assert.AreEqual("Story · 3 items", LookupPage.StoryBadge(true, () => 3, notAskedPublic));
+
+            Assert.AreEqual("Has story · sign in to download", LookupPage.StoryBadge(false, notAskedItems, () => true));
+            Assert.IsNull(LookupPage.StoryBadge(false, notAskedItems, () => false));
+        }
+
+        [TestMethod]
+        public void StoryBadgeHidesFailures()
+        {
+            Assert.IsNull(LookupPage.StoryBadge(true, () => { throw new InstaloaderSharp.TooManyRequestsException("429"); }, () => true));
+            Assert.IsNull(LookupPage.StoryBadge(false, () => 1, () => { throw new InstaloaderSharp.ConnectionException("offline"); }));
+        }
+
         // ------------------------------------------------------------------ Activity page
 
         [TestMethod]

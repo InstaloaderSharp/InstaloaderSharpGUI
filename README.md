@@ -414,7 +414,10 @@ The **Look up** page lets you check what you are about to download.
   Instagram link.
   * For a profile you see its picture, name, ID, biography and website; the numbers of posts, followers and
     following; and badges such as *Verified*, *Private* (or *Private · you follow*), the business category,
-    *Has story* and *Follows you*.
+    *Follows you*, and the current story. When you are signed in, *Story · 3 items* means the profile has a
+    story right now that **Stories** would download (it is checked the same way a download fetches it). When
+    you are not signed in, *Has story · sign in to download* means the profile has a public story, which can
+    only be downloaded when signed in. Without a current story, no story badge is shown.
   * For a hashtag you see its picture, description and number of posts.
 * **Search** (or **Enter** when you typed several words) searches Instagram for matching **profiles**,
   **hashtags** and **locations**. For each result, **Add** adds it to the download list and **Details**
