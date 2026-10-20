@@ -4,7 +4,7 @@ A Graphical User Interface program for [InstaloaderSharp](https://github.com/Ins
 captions and other metadata from Instagram: whole profiles, single posts, hashtags, locations, your feed, your
 saved posts, stories and highlights. It does this without a command line.
 
-This version of InstaloaderSharp GUI, targets compatibility with InstaloaderSharp 1.0.2 but might be compatible with later versions.
+This version of InstaloaderSharp GUI, targets compatibility with InstaloaderSharp 1.0.4 but might be compatible with later versions.
 
 Everything that InstaloaderSharp's command line can do is available in the GUI. The GUI does not start
 `InstaloaderSharp.exe` as a separate process. It uses it as a library, so you also get things the console
@@ -421,7 +421,7 @@ The **Look up** page lets you check what you are about to download.
   * For a hashtag you see its picture, description and number of posts.
 * **Search** (or **Enter** when you typed several words) searches Instagram for matching **profiles**,
   **hashtags** and **locations**. For each result, **Add** adds it to the download list and **Details**
-  shows it. Search works best when signed in.
+  shows it. Search requires that you are signed in (Instagram only answers searches from signed-in accounts).
 
 From a preview:
 
