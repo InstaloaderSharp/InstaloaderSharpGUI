@@ -311,7 +311,7 @@ namespace InstaloaderSharpGUI.Pages
         }
 
         /// <summary>Card showing a profile or hashtag.</summary>
-        private sealed class InfoCard : Control
+        internal sealed class InfoCard : Control
         {
             public readonly FlatButton AddButton;
             public readonly FlatButton FolloweesButton;
@@ -359,21 +359,56 @@ namespace InstaloaderSharpGUI.Pages
 
             private int TextX { get { return Theme.S(24) + _avatar.Width + Theme.S(20); } }
 
+            // Heights of the rows above the biography. Used both to measure and to paint the card, so that the
+            // reserved space always matches what is drawn.
+            private static int TopMargin { get { return Theme.S(20); } }
+            private static int TitleRowH { get { return Theme.S(34); } }
+            private static int SubtitleRowH { get { return Theme.S(26); } }
+            private static int BadgeRowH { get { return Theme.S(32); } }
+            private static int StatsRowH { get { return Theme.S(56); } }
+            private static int BodyGap { get { return Theme.S(16); } }
+
+            private const TextFormatFlags BodyFlags = TextFormatFlags.Left | TextFormatFlags.Top | TextFormatFlags.WordBreak | TextFormatFlags.NoPrefix;
+
+            private string BodyText
+            {
+                get { return _body + (string.IsNullOrEmpty(_external) ? "" : "\n" + _external); }
+            }
+
+            private int BodyTop
+            {
+                get { return TopMargin + TitleRowH + SubtitleRowH + (_badges.Count > 0 ? BadgeRowH : 0) + StatsRowH; }
+            }
+
+            private int TextWidth(int width)
+            {
+                return Math.Max(Theme.S(100), width - TextX - Theme.S(24));
+            }
+
             private int BodyHeight(int width)
             {
-                string text = _body + (string.IsNullOrEmpty(_external) ? "" : "\n" + _external);
+                string text = BodyText;
                 if (text.Trim().Length == 0) return 0;
-                return TextRenderer.MeasureText(text, Theme.Body, new Size(width - TextX - Theme.S(24), 0), TextFormatFlags.WordBreak | TextFormatFlags.NoPrefix).Height;
+                return TextRenderer.MeasureText(text, Theme.Body, new Size(TextWidth(width), 0), BodyFlags).Height;
             }
+
+            /// <summary>Where the biography is drawn, for the given card width.</summary>
+            internal Rectangle BodyBounds(int width)
+            {
+                return new Rectangle(TextX, BodyTop, TextWidth(width), BodyHeight(width));
+            }
+
+            internal Rectangle ButtonBounds { get { return _buttons.Bounds; } }
 
             public override Size GetPreferredSize(Size proposedSize)
             {
                 int w = proposedSize.Width > 0 ? proposedSize.Width : Width;
-                int y = Theme.S(20) + Theme.S(30) + Theme.S(22) + Theme.S(28) + Theme.S(56);
+                int y = BodyTop;
                 int bh = BodyHeight(w);
-                if (bh > 0) y += bh + Theme.S(12);
-                y += _buttons.PreferredHeight(Math.Max(100, w - TextX - Theme.S(24))) + Theme.S(20);
-                return new Size(w, Math.Max(y, Theme.S(150)));
+                if (bh > 0) y += bh + BodyGap;
+                y += _buttons.PreferredHeight(TextWidth(w)) + Theme.S(20);
+                // The avatar column must fit too.
+                return new Size(w, Math.Max(y, Theme.S(24) + _avatar.Height + Theme.S(24)));
             }
 
             protected override void OnSizeChanged(EventArgs e)
@@ -388,7 +423,7 @@ namespace InstaloaderSharpGUI.Pages
                 if (_buttons == null)
                     return; // still constructing
                 _avatar.Location = new Point(Theme.S(24), Theme.S(24));
-                int bw = Math.Max(100, Width - TextX - Theme.S(24));
+                int bw = TextWidth(Width);
                 int bh = _buttons.PreferredHeight(bw);
                 _buttons.SetBounds(TextX, Height - bh - Theme.S(20), bw, bh);
             }
@@ -399,14 +434,14 @@ namespace InstaloaderSharpGUI.Pages
                 g.Clear(Theme.Surface);
                 Theme.HighQuality(g);
                 int x = TextX;
-                int w = Width - x - Theme.S(24);
-                int y = Theme.S(20);
-                TextRenderer.DrawText(g, _title, Theme.Title, new Rectangle(x - Theme.S(2), y, w, Theme.S(34)), Theme.Text,
+                int w = TextWidth(Width);
+                int y = TopMargin;
+                TextRenderer.DrawText(g, _title, Theme.Title, new Rectangle(x - Theme.S(2), y, w, TitleRowH), Theme.Text,
                                       TextFormatFlags.Left | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis | TextFormatFlags.NoPrefix);
-                y += Theme.S(34);
+                y += TitleRowH;
                 TextRenderer.DrawText(g, _subtitle, Theme.Body, new Rectangle(x, y, w, Theme.S(20)), Theme.TextSecondary,
                                       TextFormatFlags.Left | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis | TextFormatFlags.NoPrefix);
-                y += Theme.S(26);
+                y += SubtitleRowH;
                 int bx = x;
                 foreach (string b in _badges)
                 {
@@ -418,7 +453,7 @@ namespace InstaloaderSharpGUI.Pages
                     bx += r.Width + Theme.S(6);
                 }
                 if (_badges.Count > 0)
-                    y += Theme.S(32);
+                    y += BadgeRowH;
                 int sx = x;
                 foreach (var kv in _stats)
                 {
@@ -427,11 +462,9 @@ namespace InstaloaderSharpGUI.Pages
                     int vw = Math.Max(TextRenderer.MeasureText(kv.Value, Theme.Display).Width, TextRenderer.MeasureText(kv.Key, Theme.Small).Width);
                     sx += vw + Theme.S(28);
                 }
-                y += Theme.S(56);
-                string text = _body + (string.IsNullOrEmpty(_external) ? "" : "\n" + _external);
-                if (text.Trim().Length > 0)
-                    TextRenderer.DrawText(g, text, Theme.Body, new Rectangle(x, y, w, Math.Max(0, _buttons.Top - y - Theme.S(8))), Theme.Text,
-                                          TextFormatFlags.Left | TextFormatFlags.Top | TextFormatFlags.WordBreak | TextFormatFlags.NoPrefix);
+                Rectangle body = BodyBounds(Width);
+                if (body.Height > 0)
+                    TextRenderer.DrawText(g, BodyText, Theme.Body, body, Theme.Text, BodyFlags);
             }
         }
     }

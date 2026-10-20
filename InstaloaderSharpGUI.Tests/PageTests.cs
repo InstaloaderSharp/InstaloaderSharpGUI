@@ -304,6 +304,51 @@ namespace InstaloaderSharpGUI.Tests
             });
         }
 
+        // ------------------------------------------------------------------ Look up page
+
+        [TestMethod]
+        public void ProfileCardShowsTheWholeBiography()
+        {
+            Sta.Run(() =>
+            {
+                var stats = new System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<string, string>>
+                {
+                    new System.Collections.Generic.KeyValuePair<string, string>("Posts", "8 621"),
+                    new System.Collections.Generic.KeyValuePair<string, string>("Followers", "686,6M"),
+                    new System.Collections.Generic.KeyValuePair<string, string>("Following", "308")
+                };
+                string longBio = string.Join(" ", Enumerable.Repeat("A long biography that has to wrap onto several lines.", 12)) +
+                                 "\nWith a second paragraph 🔎✨";
+                var cases = new[]
+                {
+                    // Regression: a short bio plus a link was cut off above the buttons.
+                    new { Bio = "Discover what's new on Instagram 🔎✨", Url = "http://help.instagram.com", Badges = new[] { "Verified", "Has story" } },
+                    new { Bio = longBio, Url = "https://example.com", Badges = new[] { "Private", "Business" } },
+                    new { Bio = longBio, Url = (string)null, Badges = new string[0] },
+                    new { Bio = "", Url = (string)null, Badges = new[] { "Verified" } }
+                };
+                foreach (int width in new[] { Theme.S(1040), Theme.S(600), Theme.S(420) })
+                {
+                    foreach (var c in cases)
+                    {
+                        var card = new LookupPage.InfoCard();
+                        card.Show("Instagram", "@instagram  ·  ID 25025320", c.Bio, c.Url, stats, c.Badges.ToList(), null,
+                                  "instagram", "instagram", "https://www.instagram.com/instagram/", true);
+                        card.SetBounds(0, 0, width, card.PreferredHeight(width));
+                        card.PerformLayout();
+
+                        System.Drawing.Rectangle body = card.BodyBounds(width);
+                        System.Drawing.Rectangle buttons = card.ButtonBounds;
+                        string what = string.Format("width {0}, bio of {1} characters, {2} badge(s)", width, c.Bio.Length, c.Badges.Length);
+                        if (c.Bio.Length > 0)
+                            Assert.IsTrue(body.Height > 0, what);
+                        Assert.IsTrue(body.Bottom <= buttons.Top, what + ": biography overlaps the buttons");
+                        Assert.IsTrue(buttons.Bottom <= card.Height, what + ": buttons outside the card");
+                    }
+                }
+            });
+        }
+
         // ------------------------------------------------------------------ Activity page
 
         [TestMethod]
