@@ -6,13 +6,6 @@ saved posts, stories and highlights. It does this without a command line.
 
 This version of InstaloaderSharp GUI has been tested for compatibility with InstaloaderSharp 1.0.4, but might be compatible with later versions.
 
-> [!NOTE]  
-> InstaloaderSharp GUI requires [InstaloaderSharp](https://github.com/InstaloaderSharp/InstaloaderSharp/releases) to work.
-> Download the version listed above that has been tested for compatibility.
-
-> [!IMPORTANT]  
-> Only download later versions if you are experiencing problems.
-
 Everything that InstaloaderSharp's command line can do is available in the GUI. The GUI does not start
 `InstaloaderSharp.exe` as a separate process. It uses it as a library, so you also get things the console
 cannot offer: live progress bars, a profile preview, Instagram search, filters that are checked as you type,
@@ -20,6 +13,13 @@ sign-in with dialogs for passwords and two-factor codes, and a list of saved ses
 
 No previous knowledge of InstaloaderSharp or Instaloader is needed. This document covers everything from a first download to the
 advanced options.
+
+> [!NOTE]  
+> InstaloaderSharp GUI requires [InstaloaderSharp](https://github.com/InstaloaderSharp/InstaloaderSharp/releases) to work.
+> Download the version listed above that has been tested for compatibility.
+
+> [!IMPORTANT]  
+> Only download later versions of InstaloaderSharp if you are experiencing problems.
 
 * [Requirements and building](#requirements-and-building)
 * [Quick start](#quick-start)
