@@ -458,7 +458,7 @@ command line option is shown in parentheses after each description.
 | **Sanitize paths** | Off | Also make names valid on Linux and macOS. |
 
 **Insert** adds a placeholder at the cursor: `{target}`, `{profile}`, `{owner_username}`, `{owner_id}`,
-`{shortcode}`, `{mediaid}`, `{typename}`, `{date_utc}`, `{date_local}`, `{filename}`, `{dirname}`, and
+`{shortcode}`, `{mediaid}`, `{typename}`, `{date_utc}`, `{date_local}`, `{filename}`, and
 formatted dates. All [post properties](#filters) can be used.
 Format specifications can follow a colon:
 
