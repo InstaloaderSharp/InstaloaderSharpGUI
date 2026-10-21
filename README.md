@@ -14,6 +14,8 @@ sign-in with dialogs for passwords and two-factor codes, and a list of saved ses
 No previous knowledge of InstaloaderSharp or Instaloader is needed. This document covers everything from a first download to the
 advanced options.
 
+The full manual is in the [wiki](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/wiki/Home).
+
 > [!NOTE]  
 > InstaloaderSharp GUI requires [InstaloaderSharp](https://github.com/InstaloaderSharp/InstaloaderSharp/releases) to work.
 > Download the version listed above that has been tested for compatibility.

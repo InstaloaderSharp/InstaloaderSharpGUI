@@ -40,13 +40,13 @@ namespace InstaloaderSharpGUI.Pages
             _search = row.Add(new FlatButton("Search", ButtonKind.Secondary, Glyphs.Search));
             card.Add(Padded(row, 16, 14));
             Tip(_lookup, "Show details of a profile (username) or hashtag (#tag).");
-            Tip(_search, "Search Instagram for matching profiles, hashtags and locations. Works best when signed in.");
+            Tip(_search, "Search Instagram for matching profiles, hashtags and locations. Requires sign-in.");
 
             _status = Add(new TextBlock(""));
             _status.Visible = false;
 
             _empty = Add(new TextBlock("Try:  natgeo   ·   #sunset   ·   https://www.instagram.com/natgeo/   ·   or several words to search.\n" +
-                                       "Search and some profile details work best when you are signed in (Account page).",
+                                       "Search requires that you are signed in (Account page). Some profiles and details are only shown when you are signed in.",
                                        Theme.TextSecondary, Glyphs.Info), Theme.S(4));
 
             _info = Add(new InfoCard(), Theme.S(8));
