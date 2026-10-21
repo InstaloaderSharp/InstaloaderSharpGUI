@@ -92,6 +92,9 @@ You must be signed in with an account that follows the profile. The Look up page
 **Only some posts are downloaded.**
 Check the **Post filter**, **Maximum number of posts** (hashtags, locations, feed and saved posts only), **Fast update** and **Remember latest downloads**: each of them can stop or skip posts on purpose.
 
+**Only a few tagged posts are downloaded.**
+Use InstaloaderSharp 1.0.5 or later; older versions stop after the first few tagged posts. With **Fast update** or **Remember latest downloads**, a post in which the profile was tagged recently can also stop the download early, because Instagram lists tagged posts in the order of tagging; see [Tagged posts](Keeping-an-archive-up-to-date#tagged-posts).
+
 **Signed in, no posts are downloaded, and the output mentions a redirect to `https://www.instagram.com/`.**
 Use InstaloaderSharp 1.0.2 or later; see [Compatibility with InstaloaderSharp](Compatibility-with-InstaloaderSharp#features-that-need-a-newer-instaloadersharp).
 

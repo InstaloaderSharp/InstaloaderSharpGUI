@@ -43,6 +43,10 @@ See [Latest stamps](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Ke
 
 Use **Remember latest downloads** if you process or move the downloaded files afterwards; use **Fast update** if the download folders are your archive. Both can be on together.
 
+### Tagged posts
+
+Instagram lists tagged posts in the order in which the profile was tagged, not by the posts' dates. An old post in which the profile was tagged recently therefore stops **Fast update** or **Remember latest downloads** early when **Tagged posts** is on. Download tagged posts with both options off from time to time to catch everything. See [Latest stamps](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Keeping-an-archive-up-to-date#latest-stamps) in the InstaloaderSharp manual.
+
 ## Limiting the number of posts
 
 **Maximum number of posts** (`--count`) downloads at most this many posts. It applies to hashtags, locations, your feed and saved posts, which can otherwise be very long. Leave it empty for no limit. It must be a whole number.

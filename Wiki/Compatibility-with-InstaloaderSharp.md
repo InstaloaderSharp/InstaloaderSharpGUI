@@ -41,6 +41,7 @@ Some features depend on fixes in InstaloaderSharp:
 
 | Feature | Needs InstaloaderSharp |
 |---|---|
+| All **Tagged posts** of a profile (older versions download only the first few and then stop) | 1.0.5 or later |
 | **Search** on the Look up page (Instagram retired the website search that older versions use; they fail with *404 Not Found*) | 1.0.4 or later |
 | Downloading **Reels** of some profiles; finding age-restricted and other restricted profiles when signed in | 1.0.3 or later |
 | Downloading posts of profiles when signed in, for accounts affected by an Instagram change in October 2026 (older versions download no posts and report a redirect to Instagram's home page) | 1.0.2 or later |

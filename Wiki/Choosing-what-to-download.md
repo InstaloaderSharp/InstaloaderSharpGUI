@@ -28,6 +28,7 @@ These switches apply to every **profile** target (and to the profiles of a **fol
 - To download **only stories**, turn on **Stories** and turn off **Posts** (the console's `--stories-only`).
 - Stories are only available for 24 hours, so download them regularly if you want to keep them. Highlights stay until the owner removes them.
 - The [Look up](Looking-up-and-searching) page shows whether a profile has a current story before you download it.
+- **Tagged posts** loads each tagged post with a request of its own, so it takes longer than the profile's own posts. Downloading all tagged posts needs InstaloaderSharp 1.0.5 or later; older versions stop after the first few. For updates, see [Tagged posts](Keeping-an-archive-up-to-date#tagged-posts).
 
 These switches do not affect hashtag, location, feed, saved and single-post targets, which always download posts.
 
