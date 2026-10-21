@@ -18,7 +18,8 @@ namespace InstaloaderSharpGUI.Pages
         private readonly DarkTextBox _command;
         private readonly DarkTextBox _resumePrefix;
 
-        private static readonly string[][] PatternTokens =
+        /// <summary>Placeholders offered by "Insert" for the name patterns: {target}, {profile}, {filename} or Post properties.</summary>
+        internal static readonly string[][] PatternTokens =
         {
             new[] { "{target}", "The target you specified: profile name, #hashtag, :feed…" },
             new[] { "{profile}", "Owner's profile name" },
@@ -31,11 +32,11 @@ namespace InstaloaderSharpGUI.Pages
             new[] { "{date_utc:%Y-%m-%d}", "Date (UTC) with custom format" },
             new[] { "{date_local}", "Date in local time" },
             new[] { "{date_utc:%Y}", "Year (UTC)" },
-            new[] { "{filename}", "File name (title pattern)" },
-            new[] { "{dirname}", "Directory name (title pattern)" },
+            new[] { "{filename}", "Original file name on Instagram's server" },
         };
 
-        private static readonly string[][] TxtTokens =
+        /// <summary>Placeholders offered by "Insert" for the caption templates: Post properties.</summary>
+        internal static readonly string[][] TxtTokens =
         {
             new[] { "{caption}", "Post caption" },
             new[] { "{likes}", "Number of likes" },

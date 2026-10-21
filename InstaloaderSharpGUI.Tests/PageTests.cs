@@ -220,6 +220,24 @@ namespace InstaloaderSharpGUI.Tests
         }
 
         [TestMethod]
+        public void InsertMenusOnlyOfferExistingPlaceholders()
+        {
+            // Regression: "{dirname}" was offered, but InstaloaderSharp has no such placeholder.
+            var special = new[] { "target", "profile", "filename" };
+            foreach (string[] token in SettingsPage.PatternTokens.Concat(SettingsPage.TxtTokens))
+            {
+                StringAssert.StartsWith(token[0], "{");
+                StringAssert.EndsWith(token[0], "}");
+                string name = token[0].Trim('{', '}').Split(':')[0];
+                if (special.Contains(name) && SettingsPage.PatternTokens.Contains(token))
+                    continue;
+                // The library's attribute check (the same as for filters) knows every Post property.
+                Assert.IsNull(JobOptions.ValidateFilter<InstaloaderSharp.Post>(name), token[0] + " is not a Post property");
+            }
+            Assert.IsFalse(SettingsPage.PatternTokens.Any(t => t[0] == "{dirname}"));
+        }
+
+        [TestMethod]
         public void AboutShowsTheLoadedVersions()
         {
             Sta.Run(() =>
