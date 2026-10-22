@@ -228,6 +228,10 @@ namespace InstaloaderSharpGUI.Core
         private static readonly Regex CountRx = new Regex(@"^\[\s*(\d+)/\s*(\d+)\]\s");
         private static readonly Regex OpenCountRx = new Regex(@"^\[\s*(\d+)\]\s");
         private static readonly Regex RetrievingRx = new Regex(@"^(Retrieving .+?)(?:\.\.\.|\.)?\s*$");
+        // Counted steps rather than items, e.g. "[3/9] Retrieving highlights "Travel" from profile natgeo" and
+        // "[1/2] Retrieving stories from profile natgeo." (or "[  1] ..." without a total).
+        private static readonly Regex StepRx = new Regex(@"^\[\s*(\d+)(?:/\s*(\d+))?\]\s+(?:Downloading profile |Retrieving )");
+        private static readonly Regex CountedRetrievingRx = new Regex(@"^\[\s*(\d+)(?:/\s*(\d+))?\]\s+(Retrieving .+?)(?:\.\.\.|\.)?\s*$");
 
         private string _line = "";
 
@@ -287,8 +291,11 @@ namespace InstaloaderSharpGUI.Core
         private void InspectPartial(bool fresh)
         {
             // Item counters are printed before the item finishes; react to them as soon as they appear.
+            // Counted steps (profiles, highlights, stories) are not items.
+            if (fresh && StepRx.IsMatch(_line))
+                return;
             Match m = CountRx.Match(_line);
-            if (fresh && m.Success && !_line.Contains("Downloading profile"))
+            if (fresh && m.Success)
             {
                 Item = long.Parse(m.Groups[1].Value);
                 ItemTotal = long.Parse(m.Groups[2].Value);
@@ -314,6 +321,17 @@ namespace InstaloaderSharpGUI.Core
                 ProfileIndex = long.Parse(m.Groups[1].Value);
                 ProfileTotal = long.Parse(m.Groups[2].Value);
                 Phase = "Downloading profile " + m.Groups[3].Value;
+                Item = 0;
+                ItemTotal = 0;
+                Changed = true;
+                return;
+            }
+            m = CountedRetrievingRx.Match(line);
+            if (m.Success)
+            {
+                Phase = m.Groups[3].Value + (m.Groups[2].Success
+                    ? string.Format(" ({0} of {1})", m.Groups[1].Value, m.Groups[2].Value)
+                    : "");
                 Item = 0;
                 ItemTotal = 0;
                 Changed = true;

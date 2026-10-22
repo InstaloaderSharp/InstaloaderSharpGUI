@@ -73,6 +73,45 @@ namespace InstaloaderSharpGUI.Tests
         }
 
         [TestMethod]
+        public void CountedHighlightsAreStepsNotItems()
+        {
+            // InstaloaderSharp 1.0.6+ counts highlights: "[3/9] Retrieving highlights "..." from profile ...".
+            ActivityTracker t = Feed("[1/1] Downloading profile natgeo\n",
+                                     "[1/3] Retrieving highlights \"Travel\" from profile natgeo\n",
+                                     "[ 1/12] ", "natgeo\\a.jpg json\n",
+                                     "[ 2/12] ", "natgeo\\b.jpg exists\n",
+                                     "[2/3] Retrieving highlights \"Food\" from profile natgeo\n");
+            Assert.AreEqual(2, t.Processed, "only the story items are items");
+            Assert.AreEqual(1, t.Existing);
+            Assert.AreEqual("Retrieving highlights \"Food\" from profile natgeo (2 of 3)", t.Phase);
+            Assert.AreEqual(0, t.Item, "a new highlight starts a new list of items");
+            Assert.AreEqual(0, t.ItemTotal);
+            Assert.AreEqual(1, t.ProfileTotal, "profile progress is kept");
+
+            // The item counter of the new highlight follows.
+            t.Feed("[ 1/4] ", LogKind.Output);
+            Assert.AreEqual(1, t.Item);
+            Assert.AreEqual(4, t.ItemTotal);
+            Assert.AreEqual(3, t.Processed);
+        }
+
+        [TestMethod]
+        public void CountedStoriesAreStepsNotItems()
+        {
+            // Stories of several profiles: "[1/2] Retrieving stories from profile ...", and for :stories "[  1] ...".
+            ActivityTracker t = Feed("Downloading stories\n",
+                                     "[1/2] Retrieving stories from profile natgeo.\n",
+                                     "[1/3] ", "natgeo\\s1.jpg\n");
+            Assert.AreEqual(1, t.Processed);
+            Assert.AreEqual("Retrieving stories from profile natgeo (1 of 2)", t.Phase);
+
+            t = Feed("Retrieving all visible stories...\n", "[  1] Retrieving stories from profile natgeo.\n", "[1/5] ");
+            Assert.AreEqual(1, t.Processed, "the story's first item, not the profile line");
+            Assert.AreEqual("Retrieving stories from profile natgeo", t.Phase);
+            Assert.AreEqual(5, t.ItemTotal);
+        }
+
+        [TestMethod]
         public void NewPhaseResetsTheItemCounter()
         {
             ActivityTracker t = Feed("[5/9] x.jpg\n", "Retrieving reels videos for profile natgeo.\n");
