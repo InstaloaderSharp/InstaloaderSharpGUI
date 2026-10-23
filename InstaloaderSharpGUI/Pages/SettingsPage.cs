@@ -156,7 +156,7 @@ namespace InstaloaderSharpGUI.Pages
             about.Add(dataRow);
             var helpRow = new SettingRow("Documentation", "InstaloaderSharp GUI documentation.", Glyphs.Help);
             var docs = new FlatButton("Open docs", ButtonKind.Subtle, Glyphs.OpenInNew);
-            docs.Click += (s, e) => DownloadPage.Open("https://github.com/InstaloaderSharp/InstaloaderSharpGUI/blob/main/README.md");
+            docs.Click += (s, e) => DownloadPage.Open("https://github.com/InstaloaderSharp/InstaloaderSharpGUI/wiki");
             helpRow.Accessory = docs;
             about.Add(helpRow);
 
