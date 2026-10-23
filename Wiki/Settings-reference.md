@@ -85,6 +85,6 @@ See [Command line and the GUI](Command-line-and-the-GUI).
 | **InstaloaderSharp GUI** *version* | The GUI's version, with a **GitHub** button for its repository |
 | **InstaloaderSharp** *version* | The version of the `InstaloaderSharp.exe` that is actually loaded, with a **GitHub** button |
 | **Data folders** | Where sessions and latest stamps (`%LOCALAPPDATA%\Instaloader`) and the GUI's settings (`%LOCALAPPDATA%\InstaloaderSharpGUI`) are stored, with an **Open** button |
-| **Documentation** | Opens the GUI's documentation |
+| **Documentation** | Opens this manual, the [InstaloaderSharp GUI wiki](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/wiki) |
 
 Please include both versions when you report a problem; see [Compatibility with InstaloaderSharp](Compatibility-with-InstaloaderSharp#checking-the-versions).
