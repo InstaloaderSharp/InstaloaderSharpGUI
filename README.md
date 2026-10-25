@@ -21,7 +21,7 @@ The full manual is in the [wiki](https://github.com/InstaloaderSharp/Instaloader
 > Download the version listed above that has been tested for compatibility.
 
 > [!IMPORTANT]  
-> Only download and test later versions of InstaloaderSharp if you are experiencing problems.
+> Only download and test with later versions of InstaloaderSharp if you are experiencing problems.
 
 * [Requirements and building](#requirements-and-building)
 * [Quick start](#quick-start)
