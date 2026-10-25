@@ -79,6 +79,9 @@ The program is pacing its requests to stay within Instagram's limits. This is no
 ***429 - Too Many Requests*, *Please wait a few minutes before you try again.* (401)**
 Instagram limited the account or the connection. The program waits and retries. If it keeps happening, do not run several downloads at the same time (also not from the command line), keep **Pause between requests** on, avoid using the account heavily in the app or browser meanwhile, and stop for a while: hours rather than minutes.
 
+***Download aborted: Instagram keeps redirecting …*, or endless *HTTP redirect from … to https://www.instagram.com/* lines in the output.**
+Instagram redirects every request of the account, usually because the account is suspended, restricted or signed out. Open Instagram in a web browser with that account and follow the instructions there; a suspended account may have to be appealed. Then sign in again on the Account page, or import fresh browser cookies. With InstaloaderSharp 1.1.0 or later, the download stops by itself with **Download aborted**; older versions follow the redirects forever, so click **Stop**.
+
 See [Rate limits and blocks](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Troubleshooting-and-FAQ#rate-limits-and-blocks) and [Rate limits and connections](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Rate-limits-and-connections) in the InstaloaderSharp manual.
 
 ## Profiles and posts

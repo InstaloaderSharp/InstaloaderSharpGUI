@@ -41,6 +41,7 @@ Some features depend on fixes in InstaloaderSharp:
 
 | Feature | Needs InstaloaderSharp |
 |---|---|
+| Stopping with **Download aborted** when Instagram keeps redirecting a suspended or restricted account (older versions follow the redirects forever) | 1.1.0 or later |
 | All **Tagged posts** of a profile (older versions download only the first few and then stop) | 1.0.5 or later |
 | **Search** on the Look up page (Instagram retired the website search that older versions use; they fail with *404 Not Found*) | 1.0.4 or later |
 | Downloading **Reels** of some profiles; finding age-restricted and other restricted profiles when signed in | 1.0.3 or later |

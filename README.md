@@ -4,7 +4,7 @@ A Graphical User Interface program for [InstaloaderSharp](https://github.com/Ins
 captions and other metadata from Instagram: whole profiles, single posts, hashtags, locations, your feed, your
 saved posts, stories and highlights. It does this without a command line.
 
-This version of InstaloaderSharp GUI has been tested for compatibility with InstaloaderSharp 1.0.5, but might be compatible with later versions.
+This version of InstaloaderSharp GUI has been tested for compatibility with InstaloaderSharp 1.1.0, but might be compatible with later versions.
 
 Everything that InstaloaderSharp's command line can do is available in the GUI. The GUI does not start
 `InstaloaderSharp.exe` as a separate process. It uses it as a library, so you also get things the console
