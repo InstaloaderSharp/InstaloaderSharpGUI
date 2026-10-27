@@ -106,6 +106,9 @@ Use InstaloaderSharp 1.0.2 or later; see [Compatibility with InstaloaderSharp](C
 ***Login is required to download stories - stories will be skipped.***
 Stories, highlights, the feed and saved posts need you to be signed in; see [Signing in](Signing-in).
 
+**Some highlights are missing, with *400 Bad Request* or "invalid request" in the output.**
+Instagram refuses to list the items of some highlights. Use InstaloaderSharp 1.1.1 or later, be signed in, and keep **Use iPhone API** on (*Settings → Connection*): such highlights are then downloaded through Instagram's app interface. Older versions also stop downloading a profile's highlights at the first one that fails.
+
 **Stories are on, but no story is downloaded.**
 The profile has no current story; stories disappear after 24 hours. When you are signed in, the [Look up](Looking-up-and-searching#the-story-badge) page shows **Story · N items** when there is one. If it does and the download still gets nothing, check with `InstaloaderSharp.exe` (see [above](#is-it-a-gui-problem)).
 
