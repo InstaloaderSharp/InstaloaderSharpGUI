@@ -74,10 +74,13 @@ The green dot only appears once the session has been verified in this run of the
 ## Rate limits and blocks
 
 ***Too many queries in the last time. Need to wait …***
-The program is pacing its requests to stay within Instagram's limits. This is normal for large downloads; it continues by itself.
+The program is pacing its requests to stay within Instagram's limits. This is normal for large downloads; it continues by itself. With InstaloaderSharp 1.1.3 or later, signed-in downloads allow half as many requests in the same time as before, so they wait more often and take longer; signed-out downloads are not affected.
 
 ***429 - Too Many Requests*, *Please wait a few minutes before you try again.* (401)**
 Instagram limited the account or the connection. The program waits and retries. If it keeps happening, do not run several downloads at the same time (also not from the command line), keep **Pause between requests** on, avoid using the account heavily in the app or browser meanwhile, and stop for a while: hours rather than minutes.
+
+***Download aborted: Instagram answered … with a web page instead of data, probably a verification (captcha).***
+Instagram has flagged the account and asks for a verification. Open instagram.com in the web browser you are signed in with and complete it; the program cannot do it for you. Then let the account rest for a while, preferably a day, before downloading again: downloading right away usually leads to *feedback_required*. The position is saved, so the download continues where it stopped. Older versions of InstaloaderSharp report this as *JSON Query to graphql/query: Expecting value: line 1 column 1 (char 0)* and go on with the next targets, which Instagram counts against the account; use InstaloaderSharp 1.1.3 or later.
 
 ***Download aborted: Instagram keeps redirecting …*, or endless *HTTP redirect from … to https://www.instagram.com/* lines in the output.**
 Instagram redirects every request of the account, usually because the account is suspended, restricted or signed out. Open Instagram in a web browser with that account and follow the instructions there; a suspended account may have to be appealed. Then sign in again on the Account page, or import fresh browser cookies. With InstaloaderSharp 1.1.0 or later, the download stops by itself with **Download aborted**; older versions follow the redirects forever, so click **Stop**.
@@ -97,6 +100,9 @@ Check the **Post filter**, **Maximum number of posts** (hashtags, locations, fee
 
 **Only a few tagged posts are downloaded.**
 Use InstaloaderSharp 1.0.5 or later; older versions stop after the first few tagged posts. With **Fast update** or **Remember latest downloads**, a post in which the profile was tagged recently can also stop the download early, because Instagram lists tagged posts in the order of tagging; see [Tagged posts](Keeping-an-archive-up-to-date#tagged-posts).
+
+**Downloading the reels of a profile with many reels got the account flagged.**
+Each reel is loaded with a request of its own. Older versions of InstaloaderSharp also ask Instagram's app for each video's details, two requests per reel; use InstaloaderSharp 1.1.3 or later, which needs one. The first download of a profile with many reels still takes about one request per reel; with **Fast update** or **Remember latest downloads**, later downloads only load the new reels. Spread first downloads of large profiles over several days, one profile at a time.
 
 **Signed in, no posts are downloaded, and the output mentions a redirect to `https://www.instagram.com/`.**
 Use InstaloaderSharp 1.0.2 or later; see [Compatibility with InstaloaderSharp](Compatibility-with-InstaloaderSharp#features-that-need-a-newer-instaloadersharp).

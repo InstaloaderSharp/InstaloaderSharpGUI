@@ -53,7 +53,7 @@ The last two are only available while resuming is on. See [Running a download](R
 
 The values are checked before a download starts, and a problem is shown in the status bar right away: **Maximum connection attempts** must be a whole number of 0 or more, **Request timeout** a positive number of seconds (decimals with a point, `12.5`), and **Abort on HTTP status codes** a list of codes between 100 and 599.
 
-Keep **Pause between requests** on. See [Rate limits and connections](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Rate-limits-and-connections) in the InstaloaderSharp manual for how the program paces requests, retries and what each status code means.
+Keep **Pause between requests** on. With InstaloaderSharp 1.1.3 or later, signed-in downloads allow half as many requests in the same time as signed-out ones, so large downloads take longer. See [Rate limits and connections](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Rate-limits-and-connections) in the InstaloaderSharp manual for how the program paces requests, retries and what each status code means.
 
 ## Behaviour
 

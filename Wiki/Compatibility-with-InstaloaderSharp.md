@@ -41,6 +41,7 @@ Some features depend on fixes in InstaloaderSharp:
 
 | Feature | Needs InstaloaderSharp |
 |---|---|
+| Stopping with **Download aborted** when Instagram asks a signed-in account for a verification (captcha), instead of retrying and going on with the next targets; one request per signed-in reel instead of two; lower request limits when signed in. All three make it less likely that Instagram flags the account | 1.1.3 or later |
 | **Highlights** that Instagram refuses to list (400 "invalid request"), and downloading the remaining highlights when one fails (older versions stop at the first failing highlight) | 1.1.1 or later |
 | Stopping with **Download aborted** when Instagram keeps redirecting a suspended or restricted account (older versions follow the redirects forever) | 1.1.0 or later |
 | All **Tagged posts** of a profile (older versions download only the first few and then stop) | 1.0.5 or later |
