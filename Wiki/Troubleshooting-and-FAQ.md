@@ -157,6 +157,9 @@ In the **Download folder** shown under **Save to** on the Download page, and in 
 **Why is the folder called `：feed` / why do names contain odd characters?**
 Characters that are not allowed in Windows file names are replaced by similar-looking ones; see [File and folder names](File-and-folder-names#the-default-folder-structure).
 
+**Downloading to a network drive stops right after the first picture, with *FileStream was asked to open a device that was not a file*.**
+Setting the downloaded file's date failed on the network drive. Use InstaloaderSharp 1.1.4 or later, which sets the date the way Instaloader does and tries again when the drive is briefly unavailable. With older versions, download to a local folder instead.
+
 **After changing a name pattern, everything is downloaded again.**
 Existing files are only recognized under the names the current pattern gives. Change patterns before the first download, or use **Remember latest downloads**.
 
