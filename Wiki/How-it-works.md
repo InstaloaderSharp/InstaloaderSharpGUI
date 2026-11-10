@@ -120,4 +120,4 @@ When InstaloaderSharp changes any of these, the GUI must be checked (see [Compat
 | Stopping | `Util.Interrupt.Raise`, `Interrupt.Check` |
 | Version | The assembly version of `InstaloaderSharp.exe` |
 
-The library's API is documented in [Library use](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Library-use) in the InstaloaderSharp manual.
+The library's API is documented in [Library use](https://github.com/pzyber/InstaloaderSharp/wiki/Library-use) in the InstaloaderSharp manual.

@@ -17,15 +17,15 @@ A *target* is something to download: a profile, a hashtag, a single post, a loca
 
 | Target | Shown as | Downloads | Login required | More in the InstaloaderSharp manual |
 |---|---|---|---|---|
-| `profilename` | Profile | All posts and the profile picture of a profile (and, if you choose, its stories, highlights, tagged posts and reels). Private profiles require that you are signed in and follow them. | Only for private profiles | [Profiles](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Targets#profiles) |
-| `#hashtag` | Hashtag | Posts with that hashtag | Yes | [Hashtags](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Targets#hashtags) |
-| `%location_id` | Location | Posts tagged with a location, given by its numeric ID | Yes | [Locations](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Targets#locations) |
-| `-shortcode` | Post | A single post | No (unless the post is private) | [Single posts](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Targets#single-posts) |
-| `:feed` | Feed | Posts of your feed | Yes | [Your feed](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Targets#your-feed) |
-| `:stories` | Stories | Current stories of all accounts you follow | Yes | [Stories of the accounts you follow](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Targets#stories-of-the-accounts-you-follow) |
-| `:saved` | Saved | Posts you marked as saved | Yes | [Your saved posts](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Targets#your-saved-posts) |
-| `@profilename` | Followees | All profiles that `profilename` follows | Yes | [Followees of a profile](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Targets#followees-of-a-profile) |
-| `file.json` / `file.json.xz` | JSON file | Re-downloads a post or story item from a metadata file saved earlier | Depends | [Metadata files](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Targets#metadata-files) |
+| `profilename` | Profile | All posts and the profile picture of a profile (and, if you choose, its stories, highlights, tagged posts and reels). Private profiles require that you are signed in and follow them. | Only for private profiles | [Profiles](https://github.com/pzyber/InstaloaderSharp/wiki/Targets#profiles) |
+| `#hashtag` | Hashtag | Posts with that hashtag | Yes | [Hashtags](https://github.com/pzyber/InstaloaderSharp/wiki/Targets#hashtags) |
+| `%location_id` | Location | Posts tagged with a location, given by its numeric ID | Yes | [Locations](https://github.com/pzyber/InstaloaderSharp/wiki/Targets#locations) |
+| `-shortcode` | Post | A single post | No (unless the post is private) | [Single posts](https://github.com/pzyber/InstaloaderSharp/wiki/Targets#single-posts) |
+| `:feed` | Feed | Posts of your feed | Yes | [Your feed](https://github.com/pzyber/InstaloaderSharp/wiki/Targets#your-feed) |
+| `:stories` | Stories | Current stories of all accounts you follow | Yes | [Stories of the accounts you follow](https://github.com/pzyber/InstaloaderSharp/wiki/Targets#stories-of-the-accounts-you-follow) |
+| `:saved` | Saved | Posts you marked as saved | Yes | [Your saved posts](https://github.com/pzyber/InstaloaderSharp/wiki/Targets#your-saved-posts) |
+| `@profilename` | Followees | All profiles that `profilename` follows | Yes | [Followees of a profile](https://github.com/pzyber/InstaloaderSharp/wiki/Targets#followees-of-a-profile) |
+| `file.json` / `file.json.xz` | JSON file | Re-downloads a post or story item from a metadata file saved earlier | Depends | [Metadata files](https://github.com/pzyber/InstaloaderSharp/wiki/Targets#metadata-files) |
 
 The first column shows how the target is written on InstaloaderSharp's command line. In the program you can usually type it the same way, or simply paste an Instagram link.
 
@@ -107,7 +107,7 @@ A *followees* target downloads every profile that a profile follows. To add one,
 
 On InstaloaderSharp's command line this target is written `@profilename`. In the target box, however, `@natgeo` adds the *profile* natgeo, because that is what `@name` means on Instagram. Only **Import list…** and imported command lines use the command-line meaning.
 
-> A followees target can mean hundreds of profiles. Consider the size before starting, and see [Rate limits and connections](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Rate-limits-and-connections).
+> A followees target can mean hundreds of profiles. Consider the size before starting, and see [Rate limits and connections](https://github.com/pzyber/InstaloaderSharp/wiki/Rate-limits-and-connections).
 
 ## Metadata files
 

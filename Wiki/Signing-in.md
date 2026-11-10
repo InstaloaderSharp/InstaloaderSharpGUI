@@ -92,7 +92,7 @@ The program reads the browser's Instagram cookies, checks which account they bel
 - Recent Chrome versions encrypt cookies in a way that other programs cannot decrypt. Use Firefox or LibreWolf if Chrome does not work.
 - The imported session belongs to the browser: signing out in the browser ends it.
 
-See [Importing the login from your web browser](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Logging-in#importing-the-login-from-your-web-browser) in the InstaloaderSharp manual for the details of each browser.
+See [Importing the login from your web browser](https://github.com/pzyber/InstaloaderSharp/wiki/Logging-in#importing-the-login-from-your-web-browser) in the InstaloaderSharp manual for the details of each browser.
 
 ## Checking the session and signing out
 
@@ -124,7 +124,7 @@ Every account has its own session file. To switch accounts, click **Use** on its
 - A session file still gives access to your account. Keep `%LOCALAPPDATA%\Instaloader` private, and never post session files, cookies or two-factor codes, for example in bug reports.
 - Use a secondary account for large downloads, and avoid using the account heavily in the app or browser while downloading.
 
-See [Keeping your account safe](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Logging-in#keeping-your-account-safe) in the InstaloaderSharp manual.
+See [Keeping your account safe](https://github.com/pzyber/InstaloaderSharp/wiki/Logging-in#keeping-your-account-safe) in the InstaloaderSharp manual.
 
 ## Sign-in problems
 
@@ -137,4 +137,4 @@ See [Keeping your account safe](https://github.com/InstaloaderSharp/InstaloaderS
 | The session stopped working | Sign in again, or import fresh cookies. |
 | Two-factor authentication does not work | Use your browser's login. |
 
-See also [Troubleshooting and FAQ](Troubleshooting-and-FAQ#signing-in) and [Login problems](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Logging-in#login-problems) in the InstaloaderSharp manual.
+See also [Troubleshooting and FAQ](Troubleshooting-and-FAQ#signing-in) and [Login problems](https://github.com/pzyber/InstaloaderSharp/wiki/Logging-in#login-problems) in the InstaloaderSharp manual.

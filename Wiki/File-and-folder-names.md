@@ -42,7 +42,7 @@ Pictures\InstaloaderSharp\
 - Characters that are not allowed in Windows file names are replaced by similar-looking characters. For example, `:feed` is saved in a folder named `：feed` (with a full-width colon).
 - If a profile is renamed on Instagram, its stored `id` lets the program find it again, and the folder is renamed accordingly.
 
-Every file is described in [Downloaded files](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Downloaded-files) in the InstaloaderSharp manual.
+Every file is described in [Downloaded files](https://github.com/pzyber/InstaloaderSharp/wiki/Downloaded-files) in the InstaloaderSharp manual.
 
 ## Name patterns
 
@@ -54,7 +54,7 @@ Three patterns under *Settings → File naming* decide the names:
 | **File name pattern** | `{date_utc}_UTC` | The file names of posts and story items, without extension and without the `_1`, `_2` numbers of multi-image posts | `--filename-pattern` |
 | **Title pattern** | `{date_utc}_UTC_{typename}` | The file names of profile pictures, hashtag pictures and highlight covers | `--title-pattern` |
 
-Leave a pattern empty to use its default (shown in grey in the empty field). The **Title pattern** default becomes `{target}_{date_utc}_UTC_{typename}` when the folder name pattern contains neither `{target}` nor `{profile}`, so that the profile pictures of different profiles in a shared folder do not overwrite each other. See [Profile pictures and highlight covers](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/File-and-folder-names#profile-pictures-and-highlight-covers).
+Leave a pattern empty to use its default (shown in grey in the empty field). The **Title pattern** default becomes `{target}_{date_utc}_UTC_{typename}` when the folder name pattern contains neither `{target}` nor `{profile}`, so that the profile pictures of different profiles in a shared folder do not overwrite each other. See [Profile pictures and highlight covers](https://github.com/pzyber/InstaloaderSharp/wiki/File-and-folder-names#profile-pictures-and-highlight-covers).
 
 In a pattern, `{name}` is replaced by a property of the post. A `\` (or `/`) in the folder name pattern creates subfolders, and the folder name pattern may be an absolute path such as `D:\Instagram\{profile}`. The file name pattern is relative to the folder.
 
@@ -74,7 +74,7 @@ Click **Insert** next to a pattern for a list of common placeholders; the chosen
 | `{date_utc:%Y-%m-%d}`, `{date_utc:%Y}` | Formatted dates (see below) |
 | `{filename}` | The original file name on Instagram's server |
 
-All [post properties](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Properties-reference) can be used, for example `{likes}` or `{pcaption}`, a shortened single-line caption suitable for file names. See [Placeholders](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/File-and-folder-names#placeholders).
+All [post properties](https://github.com/pzyber/InstaloaderSharp/wiki/Properties-reference) can be used, for example `{likes}` or `{pcaption}`, a shortened single-line caption suitable for file names. See [Placeholders](https://github.com/pzyber/InstaloaderSharp/wiki/File-and-folder-names#placeholders).
 
 ## Format specifications
 
@@ -88,7 +88,7 @@ After a colon, a placeholder can be formatted:
 | `{likes:06d}` | `000150` |
 | `{caption:.40}` | the first 40 characters of the caption |
 
-Date codes include `%Y` year, `%m` month, `%d` day, `%H` hour, `%M` minute, `%S` second, `%A` weekday name and `%B` month name. See [Format specifications](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/File-and-folder-names#format-specifications).
+Date codes include `%Y` year, `%m` month, `%d` day, `%H` hour, `%M` minute, `%S` second, `%A` weekday name and `%B` month name. See [Format specifications](https://github.com/pzyber/InstaloaderSharp/wiki/File-and-folder-names#format-specifications).
 
 ## Examples
 
@@ -122,7 +122,7 @@ Each line of the box becomes one line in the file, and **Insert** offers `{capti
 Posted {date_utc} - {likes} likes, {comments} comments
 ```
 
-In caption files, values are written as they are; no characters are replaced. A template cannot be used while **Captions** is off on the Download page. See [Caption file templates](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/File-and-folder-names#caption-file-templates).
+In caption files, values are written as they are; no characters are replaced. A template cannot be used while **Captions** is off on the Download page. See [Caption file templates](https://github.com/pzyber/InstaloaderSharp/wiki/File-and-folder-names#caption-file-templates).
 
 ## Things to keep in mind
 
@@ -132,4 +132,4 @@ In caption files, values are written as they are; no characters are replaced. A 
 - **Stories use the same patterns.** The file name pattern applies to story items too, so use placeholders that story items have as well (such as `{date_utc}`, `{shortcode}`, `{owner_username}`), or the story download fails.
 - The copied command line (*Settings → Command line*) contains your patterns, so a scheduled task saves files with the same names.
 
-See [Things to keep in mind](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/File-and-folder-names#things-to-keep-in-mind) in the InstaloaderSharp manual.
+See [Things to keep in mind](https://github.com/pzyber/InstaloaderSharp/wiki/File-and-folder-names#things-to-keep-in-mind) in the InstaloaderSharp manual.

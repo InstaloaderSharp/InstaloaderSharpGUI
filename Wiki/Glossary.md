@@ -1,4 +1,4 @@
-Terms used in InstaloaderSharp GUI and this manual. Instagram terms and InstaloaderSharp's own terms are explained in more detail in the [InstaloaderSharp glossary](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Glossary).
+Terms used in InstaloaderSharp GUI and this manual. Instagram terms and InstaloaderSharp's own terms are explained in more detail in the [InstaloaderSharp glossary](https://github.com/pzyber/InstaloaderSharp/wiki/Glossary).
 
 | Term | Meaning |
 |---|---|

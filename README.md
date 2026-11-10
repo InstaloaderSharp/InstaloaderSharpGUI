@@ -1,6 +1,6 @@
 # InstaloaderSharp GUI
 
-A Graphical User Interface program for [InstaloaderSharp](https://github.com/InstaloaderSharp/InstaloaderSharp). It downloads pictures and videos along with their
+A Graphical User Interface program for [InstaloaderSharp](https://github.com/pzyber/InstaloaderSharp). It downloads pictures and videos along with their
 captions and other metadata from Instagram: whole profiles, single posts, hashtags, locations, your feed, your
 saved posts, stories and highlights. It does this without a command line.
 
@@ -14,10 +14,10 @@ sign-in with dialogs for passwords and two-factor codes, and a list of saved ses
 No previous knowledge of InstaloaderSharp or Instaloader is needed. This document covers everything from a first download to the
 advanced options.
 
-The full manual is in the [wiki](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/wiki/Home).
+The full manual is in the [wiki](https://github.com/pzyber/InstaloaderSharpGUI/wiki/Home).
 
 > [!NOTE]  
-> InstaloaderSharp GUI requires [InstaloaderSharp](https://github.com/InstaloaderSharp/InstaloaderSharp/releases) to work.
+> InstaloaderSharp GUI requires [InstaloaderSharp](https://github.com/pzyber/InstaloaderSharp/releases) to work.
 > Download the version listed above that has been tested for compatibility.
 
 > [!IMPORTANT]  
@@ -253,7 +253,7 @@ Useful post properties:
 
 Story item properties include `date_utc`, `date_local`, `expiring_utc`, `is_video`, `typename`, `caption`,
 `caption_hashtags`, `caption_mentions`, `owner_username`, `owner_id`, `shortcode` and `mediaid`. See the
-[InstaloaderSharp README](https://github.com/InstaloaderSharp/InstaloaderSharp/blob/main/README.md#filtering-posts)
+[InstaloaderSharp README](https://github.com/pzyber/InstaloaderSharp/blob/main/README.md#filtering-posts)
 for more details.
 
 ## Where files go

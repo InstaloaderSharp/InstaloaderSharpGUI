@@ -57,7 +57,7 @@ Run it with:
 InstaloaderSharp.exe +args.txt
 ```
 
-Relative paths in the file are resolved from the folder you run it in. Argument files are useful to keep several target lists, to schedule downloads, and to share a setup. See [Reading options from a file](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Command-line-options#reading-options-from-a-file) in the InstaloaderSharp manual.
+Relative paths in the file are resolved from the folder you run it in. Argument files are useful to keep several target lists, to schedule downloads, and to share a setup. See [Reading options from a file](https://github.com/pzyber/InstaloaderSharp/wiki/Command-line-options#reading-options-from-a-file) in the InstaloaderSharp manual.
 
 ## Importing a command line
 
@@ -96,7 +96,7 @@ A session created with **Sign in** in the GUI works with `InstaloaderSharp.exe -
 
 ## Option reference
 
-Every InstaloaderSharp command-line option, and where to find it in the GUI. The options are explained in [Command-line options](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Command-line-options) in the InstaloaderSharp manual.
+Every InstaloaderSharp command-line option, and where to find it in the GUI. The options are explained in [Command-line options](https://github.com/pzyber/InstaloaderSharp/wiki/Command-line-options) in the InstaloaderSharp manual.
 
 | Command line | GUI |
 |---|---|

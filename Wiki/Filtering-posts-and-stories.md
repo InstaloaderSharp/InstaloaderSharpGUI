@@ -86,7 +86,7 @@ Some properties can be missing for a post, for example `caption` for a post with
 - If a comparison fails because of a missing value (`video_duration > 60` for a picture), that post is skipped with an error, and the download continues.
 - If a method of a missing value is called (`caption.lower()` for a post without a caption), the download stops with an error.
 
-Guard properties that can be missing with `is not None`, as in the last two examples above. See [When a filter fails](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Filtering-posts-and-stories#when-a-filter-fails) in the InstaloaderSharp manual.
+Guard properties that can be missing with `is not None`, as in the last two examples above. See [When a filter fails](https://github.com/pzyber/InstaloaderSharp/wiki/Filtering-posts-and-stories#when-a-filter-fails) in the InstaloaderSharp manual.
 
 ## Filters and updates
 
@@ -96,5 +96,5 @@ Skipped posts do not stop a **Fast update**: it stops only at a post that passes
 
 The InstaloaderSharp manual describes everything filters can do:
 
-- [Filtering posts and stories](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Filtering-posts-and-stories): the expression language, dates, text and lists, story filters.
-- [Properties reference](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Properties-reference): every property of posts and story items, with its type and meaning.
+- [Filtering posts and stories](https://github.com/pzyber/InstaloaderSharp/wiki/Filtering-posts-and-stories): the expression language, dates, text and lists, story filters.
+- [Properties reference](https://github.com/pzyber/InstaloaderSharp/wiki/Properties-reference): every property of posts and story items, with its type and meaning.

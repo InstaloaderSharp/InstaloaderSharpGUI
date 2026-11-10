@@ -140,13 +140,13 @@ namespace InstaloaderSharpGUI.Pages
             var guiRow = new SettingRow("InstaloaderSharp GUI " + gui.ToString(3),
                                         "Graphical front end that drives the InstaloaderSharp library directly.", Glyphs.Info);
             var guiGh = new FlatButton("GitHub", ButtonKind.Subtle, Glyphs.OpenInNew);
-            guiGh.Click += (s, e) => DownloadPage.Open("https://github.com/InstaloaderSharp/InstaloaderSharpGUI");
+            guiGh.Click += (s, e) => DownloadPage.Open("https://github.com/pzyber/InstaloaderSharpGUI");
             guiRow.Accessory = guiGh;
             about.Add(guiRow);
             var libRow = new SettingRow("InstaloaderSharp " + Library.Version,
                                         "C# version of Instaloader.", Glyphs.Code);
             var gh = new FlatButton("GitHub", ButtonKind.Subtle, Glyphs.OpenInNew);
-            gh.Click += (s, e) => DownloadPage.Open("https://github.com/InstaloaderSharp/InstaloaderSharp");
+            gh.Click += (s, e) => DownloadPage.Open("https://github.com/pzyber/InstaloaderSharp");
             libRow.Accessory = gh;
             about.Add(libRow);
             var dataRow = new SettingRow("Data folders", "Sessions and stamps: " + Library.ConfigDir + "\nGUI settings: " + SettingsStore.Folder, Glyphs.Folder);
@@ -156,7 +156,7 @@ namespace InstaloaderSharpGUI.Pages
             about.Add(dataRow);
             var helpRow = new SettingRow("Documentation", "InstaloaderSharp GUI documentation.", Glyphs.Help);
             var docs = new FlatButton("Open docs", ButtonKind.Subtle, Glyphs.OpenInNew);
-            docs.Click += (s, e) => DownloadPage.Open("https://github.com/InstaloaderSharp/InstaloaderSharpGUI/wiki");
+            docs.Click += (s, e) => DownloadPage.Open("https://github.com/pzyber/InstaloaderSharpGUI/wiki");
             helpRow.Accessory = docs;
             about.Add(helpRow);
 

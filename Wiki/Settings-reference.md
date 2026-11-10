@@ -38,7 +38,7 @@ These templates cannot be used while **Captions** is off on the Download page. S
 | **Resume file prefix** | `iterator` | Name prefix of the resume files | `--resume-prefix` |
 | **Use aged resume files** | Off | Also resume from resume files that are older than the last successful download | `--use-aged-resume-files` |
 
-The last two are only available while resuming is on. See [Running a download](Running-a-download#stopping-and-resuming) and [Interrupting and resuming](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Interrupting-and-resuming) in the InstaloaderSharp manual.
+The last two are only available while resuming is on. See [Running a download](Running-a-download#stopping-and-resuming) and [Interrupting and resuming](https://github.com/pzyber/InstaloaderSharp/wiki/Interrupting-and-resuming) in the InstaloaderSharp manual.
 
 ## Connection
 
@@ -53,7 +53,7 @@ The last two are only available while resuming is on. See [Running a download](R
 
 The values are checked before a download starts, and a problem is shown in the status bar right away: **Maximum connection attempts** must be a whole number of 0 or more, **Request timeout** a positive number of seconds (decimals with a point, `12.5`), and **Abort on HTTP status codes** a list of codes between 100 and 599.
 
-Keep **Pause between requests** on. With InstaloaderSharp 1.1.3 or later, signed-in downloads allow half as many requests in the same time as signed-out ones, so large downloads take longer. See [Rate limits and connections](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Rate-limits-and-connections) in the InstaloaderSharp manual for how the program paces requests, retries and what each status code means.
+Keep **Pause between requests** on. With InstaloaderSharp 1.1.3 or later, signed-in downloads allow half as many requests in the same time as signed-out ones, so large downloads take longer. See [Rate limits and connections](https://github.com/pzyber/InstaloaderSharp/wiki/Rate-limits-and-connections) in the InstaloaderSharp manual for how the program paces requests, retries and what each status code means.
 
 ## Behaviour
 
@@ -85,6 +85,6 @@ See [Command line and the GUI](Command-line-and-the-GUI).
 | **InstaloaderSharp GUI** *version* | The GUI's version, with a **GitHub** button for its repository |
 | **InstaloaderSharp** *version* | The version of the `InstaloaderSharp.exe` that is actually loaded, with a **GitHub** button |
 | **Data folders** | Where sessions and latest stamps (`%LOCALAPPDATA%\Instaloader`) and the GUI's settings (`%LOCALAPPDATA%\InstaloaderSharpGUI`) are stored, with an **Open** button |
-| **Documentation** | Opens this manual, the [InstaloaderSharp GUI wiki](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/wiki) |
+| **Documentation** | Opens this manual, the [InstaloaderSharp GUI wiki](https://github.com/pzyber/InstaloaderSharpGUI/wiki) |
 
 Please include both versions when you report a problem; see [Compatibility with InstaloaderSharp](Compatibility-with-InstaloaderSharp#checking-the-versions).

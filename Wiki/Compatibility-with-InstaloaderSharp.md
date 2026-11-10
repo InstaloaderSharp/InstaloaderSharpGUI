@@ -11,7 +11,7 @@ InstaloaderSharp GUI needs `InstaloaderSharp.exe`, which does the actual downloa
 
 ## Which InstaloaderSharp version to use
 
-Every InstaloaderSharp GUI release is tested with one InstaloaderSharp version, which is named at the top of the [README](https://github.com/InstaloaderSharp/InstaloaderSharpGUI#readme) and in the release notes. **Use that version.** Download it from the [InstaloaderSharp releases](https://github.com/InstaloaderSharp/InstaloaderSharp/releases), and put `InstaloaderSharp.exe` in the same folder as `InstaloaderSharpGUI.exe`.
+Every InstaloaderSharp GUI release is tested with one InstaloaderSharp version, which is named at the top of the [README](https://github.com/pzyber/InstaloaderSharpGUI#readme) and in the release notes. **Use that version.** Download it from the [InstaloaderSharp releases](https://github.com/pzyber/InstaloaderSharp/releases), and put `InstaloaderSharp.exe` in the same folder as `InstaloaderSharpGUI.exe`.
 
 Later InstaloaderSharp versions usually work too, but have not been tested with your GUI version. Only use a later version if you run into problems that a newer InstaloaderSharp fixes, for example after a change on Instagram's side. Older versions are not recommended: features of the GUI may not work with them (see [below](#features-that-need-a-newer-instaloadersharp)).
 
@@ -29,7 +29,7 @@ Please include both versions in bug reports.
 ## Updating InstaloaderSharp
 
 1. Close InstaloaderSharp GUI.
-2. Download the new `InstaloaderSharp-<version>-win.zip` from the [InstaloaderSharp releases](https://github.com/InstaloaderSharp/InstaloaderSharp/releases).
+2. Download the new `InstaloaderSharp-<version>-win.zip` from the [InstaloaderSharp releases](https://github.com/pzyber/InstaloaderSharp/releases).
 3. Replace `InstaloaderSharp.exe` next to `InstaloaderSharpGUI.exe` with the new one.
 4. Start the GUI and check the version under *Settings → About*.
 
@@ -51,7 +51,7 @@ Some features depend on fixes in InstaloaderSharp:
 | Downloading posts of profiles when signed in, for accounts affected by an Instagram change in October 2026 (older versions download no posts and report a redirect to Instagram's home page) | 1.0.2 or later |
 | Paths longer than 260 characters, if enabled in Windows; names with formatted dates such as `{date_utc:%c}` | 1.0.1 or later |
 
-See the [InstaloaderSharp releases](https://github.com/InstaloaderSharp/InstaloaderSharp/releases) for everything that changed in each version.
+See the [InstaloaderSharp releases](https://github.com/pzyber/InstaloaderSharp/releases) for everything that changed in each version.
 
 ## When the versions do not fit together
 

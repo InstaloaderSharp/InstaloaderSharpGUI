@@ -34,7 +34,7 @@ These switches apply to every **profile** target (and to the profiles of a **fol
 
 These switches do not affect hashtag, location, feed, saved and single-post targets, which always download posts.
 
-See [What is downloaded of each profile](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Choosing-what-to-download#what-is-downloaded-of-each-profile) in the InstaloaderSharp manual.
+See [What is downloaded of each profile](https://github.com/pzyber/InstaloaderSharp/wiki/Choosing-what-to-download#what-is-downloaded-of-each-profile) in the InstaloaderSharp manual.
 
 ## What to save of each post
 
@@ -52,7 +52,7 @@ These options apply to every downloaded post, story item and reel:
 | **Compress JSON** | On | Store metadata as compressed `.json.xz` instead of readable `.json`. Only available while **Metadata JSON** is on. | `--no-compress-json` when off |
 | **Images of multi-image posts** | All | See below | `--slide` |
 
-The files and their names are described in [Downloaded files](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Downloaded-files) in the InstaloaderSharp manual, and their formats in [File formats](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/File-formats).
+The files and their names are described in [Downloaded files](https://github.com/pzyber/InstaloaderSharp/wiki/Downloaded-files) in the InstaloaderSharp manual, and their formats in [File formats](https://github.com/pzyber/InstaloaderSharp/wiki/File-formats).
 
 ## Images of multi-image posts
 
@@ -68,7 +68,7 @@ A post with several pictures or videos (a *sidecar*) gets one numbered file per 
 
 The value is checked as you type. An invalid value, such as `0`, `4-2` or `first`, is reported under the targets and keeps the download from starting: *Images of multi-image posts: Invalid data for --slide parameter.*
 
-See [Parts of posts with several pictures](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Choosing-what-to-download#parts-of-posts-with-several-pictures).
+See [Parts of posts with several pictures](https://github.com/pzyber/InstaloaderSharp/wiki/Choosing-what-to-download#parts-of-posts-with-several-pictures).
 
 ## Captions and caption templates
 
@@ -93,4 +93,4 @@ By default, each post's `.txt` file contains its caption. What is written into t
 | **Pictures** off with **Fast update** on | Fast update decides that a post was downloaded before by its picture file, which is not created. Use **Remember latest downloads** instead. |
 | **Captions** off with a caption template | They contradict each other. |
 
-The program shows these problems under the targets and in the status bar, and does not start until they are fixed. See [Combinations that are not allowed](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Choosing-what-to-download#combinations-that-are-not-allowed) in the InstaloaderSharp manual.
+The program shows these problems under the targets and in the status bar, and does not start until they are fixed. See [Combinations that are not allowed](https://github.com/pzyber/InstaloaderSharp/wiki/Choosing-what-to-download#combinations-that-are-not-allowed) in the InstaloaderSharp manual.

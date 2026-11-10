@@ -28,7 +28,7 @@ Fast update cannot be combined with **Pictures** turned off, because it recogniz
 
 When you turn it on, a **Stamps file** field appears. Leave it empty to use the default file, `%LOCALAPPDATA%\Instaloader\latest-stamps.ini`, which InstaloaderSharp and Instaloader use as well, or choose another file with **Browse…**.
 
-See [Latest stamps](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Keeping-an-archive-up-to-date#latest-stamps) in the InstaloaderSharp manual.
+See [Latest stamps](https://github.com/pzyber/InstaloaderSharp/wiki/Keeping-an-archive-up-to-date#latest-stamps) in the InstaloaderSharp manual.
 
 ## Fast update or latest downloads?
 
@@ -45,7 +45,7 @@ Use **Remember latest downloads** if you process or move the downloaded files af
 
 ### Tagged posts
 
-Instagram lists tagged posts in the order in which the profile was tagged, not by the posts' dates. An old post in which the profile was tagged recently therefore stops **Fast update** or **Remember latest downloads** early when **Tagged posts** is on. Download tagged posts with both options off from time to time to catch everything. See [Latest stamps](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Keeping-an-archive-up-to-date#latest-stamps) in the InstaloaderSharp manual.
+Instagram lists tagged posts in the order in which the profile was tagged, not by the posts' dates. An old post in which the profile was tagged recently therefore stops **Fast update** or **Remember latest downloads** early when **Tagged posts** is on. Download tagged posts with both options off from time to time to catch everything. See [Latest stamps](https://github.com/pzyber/InstaloaderSharp/wiki/Keeping-an-archive-up-to-date#latest-stamps) in the InstaloaderSharp manual.
 
 ## Limiting the number of posts
 
@@ -84,6 +84,6 @@ InstaloaderSharp GUI has no scheduler of its own, and does not need to be runnin
 
 Because the GUI and the scheduled task use the same session file, download folder and stamps file, you can still open the GUI at any time, for example to check a profile on the Look up page or to download something extra.
 
-Check the log and the task's **Last Run Result** from time to time: 0 means success, 1 that some items failed, and 3 that the session has expired and you need to sign in again (use **Sign in** on the GUI's Account page). The details are in [Scheduled downloads](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Keeping-an-archive-up-to-date#scheduled-downloads) and [Exit codes](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Command-line-options#exit-codes) in the InstaloaderSharp manual.
+Check the log and the task's **Last Run Result** from time to time: 0 means success, 1 that some items failed, and 3 that the session has expired and you need to sign in again (use **Sign in** on the GUI's Account page). The details are in [Scheduled downloads](https://github.com/pzyber/InstaloaderSharp/wiki/Keeping-an-archive-up-to-date#scheduled-downloads) and [Exit codes](https://github.com/pzyber/InstaloaderSharp/wiki/Command-line-options#exit-codes) in the InstaloaderSharp manual.
 
 > Do not schedule several downloads with the same account at the same time, and do not run them too often: once or twice a day is enough for posts. Stories need a daily run to catch everything, since they disappear after 24 hours.

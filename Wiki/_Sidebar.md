@@ -26,5 +26,5 @@
 **Project**
 - [Building and contributing](Building-and-contributing)
 - [How it works](How-it-works)
-- [Releases](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/releases)
-- [InstaloaderSharp manual](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki)
+- [Releases](https://github.com/pzyber/InstaloaderSharpGUI/releases)
+- [InstaloaderSharp manual](https://github.com/pzyber/InstaloaderSharp/wiki)

@@ -3,9 +3,9 @@
 Thank you for your interest in InstaloaderSharp GUI! Everything about the project, including bug reports,
 feature requests, questions and code contributions, is handled through the GitHub repository:
 
-**https://github.com/InstaloaderSharp/InstaloaderSharpGUI**
+**https://github.com/pzyber/InstaloaderSharpGUI**
 
-InstaloaderSharp GUI is the graphical front end of [InstaloaderSharp](https://github.com/InstaloaderSharp/InstaloaderSharp),
+InstaloaderSharp GUI is the graphical front end of [InstaloaderSharp](https://github.com/pzyber/InstaloaderSharp),
 which does the actual downloading. Many problems that show up in the GUI come from InstaloaderSharp or from
 Instagram. Please read [Is it a GUI problem?](#is-it-a-gui-problem) before reporting, so that your report goes to
 the right project.
@@ -36,8 +36,8 @@ comes from:
 
 | `InstaloaderSharp.exe` shows… | Then the problem is probably in… | Report it to |
 | --- | --- | --- |
-| the same error or the same wrong result | InstaloaderSharp, or a change on Instagram's side | [InstaloaderSharp issues](https://github.com/InstaloaderSharp/InstaloaderSharp/issues) |
-| no problem | the GUI | [InstaloaderSharp GUI issues](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/issues) |
+| the same error or the same wrong result | InstaloaderSharp, or a change on Instagram's side | [InstaloaderSharp issues](https://github.com/pzyber/InstaloaderSharp/issues) |
+| no problem | the GUI | [InstaloaderSharp GUI issues](https://github.com/pzyber/InstaloaderSharpGUI/issues) |
 
 As a rule of thumb:
 
@@ -54,9 +54,9 @@ If you are not sure, report it here and say what you tried; it can be moved.
 
 ## Reporting a bug
 
-Report bugs in the [issue tracker](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/issues).
+Report bugs in the [issue tracker](https://github.com/pzyber/InstaloaderSharpGUI/issues).
 
-1. **Search first.** Check the [open and closed issues](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/issues?q=is%3Aissue)
+1. **Search first.** Check the [open and closed issues](https://github.com/pzyber/InstaloaderSharpGUI/issues?q=is%3Aissue)
    for the same problem. If you find one, add any new details as a comment instead of opening a duplicate.
 2. **Make sure you use the latest versions** of both InstaloaderSharp GUI and InstaloaderSharp. Many problems are
    caused by changes on Instagram's side and may already be fixed in a newer InstaloaderSharp.
@@ -97,19 +97,19 @@ Waiting, using the account normally in a browser for a while, or importing fresh
 
 If you find a security problem, for example in how passwords, session files or cookies are handled, **do not
 open a public issue.** Report it privately through the repository's
-[Security tab](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/security) ("Report a vulnerability"), so
+[Security tab](https://github.com/pzyber/InstaloaderSharpGUI/security) ("Report a vulnerability"), so
 that it can be fixed before it is disclosed. If the problem is in InstaloaderSharp itself, report it there in the
 same way.
 
 ## Suggesting a feature
 
-Feature requests are welcome as [issues](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/issues/new).
+Feature requests are welcome as [issues](https://github.com/pzyber/InstaloaderSharpGUI/issues/new).
 Describe what you would like to do and why (the use case), not only the proposed solution.
 
 * **Features of the user interface** (a new page, a better way to add targets, a setting that should be easier to
   find, …) belong here.
 * **New download features or options** must exist in InstaloaderSharp first, because the GUI only offers what the
-  library can do. Request them in the [InstaloaderSharp repository](https://github.com/InstaloaderSharp/InstaloaderSharp/issues);
+  library can do. Request them in the [InstaloaderSharp repository](https://github.com/pzyber/InstaloaderSharp/issues);
   once they are released, the GUI will offer them too.
 
 Please keep in mind that InstaloaderSharp and the GUI only download data; features that act on Instagram
@@ -119,7 +119,7 @@ Please keep in mind that InstaloaderSharp and the GUI only download data; featur
 
 For questions about using the GUI, first check the [README](README.md), which describes every page and option.
 Every option also has a description in the program. If that does not answer your question, open an
-[issue](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/issues) and describe what you are trying to do.
+[issue](https://github.com/pzyber/InstaloaderSharpGUI/issues) and describe what you are trying to do.
 
 ## Contributing code
 
@@ -143,8 +143,8 @@ welcome. For larger changes, please open an issue first to discuss the approach,
 3. Put a compiled `InstaloaderSharp.exe` into the `InstaloaderSharp` folder of the repository (next to
    `InstaloaderSharpGUI.sln`). It is not part of the repository. Use the version the GUI currently targets (see
    the [README](README.md)): download it from the
-   [InstaloaderSharp releases](https://github.com/InstaloaderSharp/InstaloaderSharp/releases), or build it from
-   the [InstaloaderSharp source](https://github.com/InstaloaderSharp/InstaloaderSharp).
+   [InstaloaderSharp releases](https://github.com/pzyber/InstaloaderSharp/releases), or build it from
+   the [InstaloaderSharp source](https://github.com/pzyber/InstaloaderSharp).
 
 4. Build the solution, either in Visual Studio (2015 or later) or with:
 
@@ -215,7 +215,7 @@ welcome. For larger changes, please open an issue first to discuss the approach,
 
 The solution contains a unit test project, `InstaloaderSharpGUI.Tests` (MSTest). The tests run offline. They make
 no requests to Instagram and need no account. They do not repeat what the
-[InstaloaderSharp tests](https://github.com/InstaloaderSharp/InstaloaderSharp/tree/main/InstaloaderSharp.Tests)
+[InstaloaderSharp tests](https://github.com/pzyber/InstaloaderSharp/tree/main/InstaloaderSharp.Tests)
 already cover, but test the GUI's own code and how it uses the library:
 
 * Understanding typed and pasted targets, including all kinds of Instagram links (`TargetsTests`).
@@ -296,7 +296,7 @@ When a new version of InstaloaderSharp is released:
 3. Make sure your branch is up to date with `main`, builds without errors and warnings, and passes all unit
    tests.
 4. Push the branch to your fork and open a pull request against `main` of
-   [InstaloaderSharp/InstaloaderSharpGUI](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/pulls).
+   [pzyber/InstaloaderSharpGUI](https://github.com/pzyber/InstaloaderSharpGUI/pulls).
 5. In the description, explain what the change does, link the related issue (e.g. "Fixes #12"), and describe how
    you tested it. For visual changes, add before and after screenshots.
 6. Be ready to answer questions and to update your pull request after review.

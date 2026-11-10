@@ -1,4 +1,4 @@
-Common problems and their solutions. If your problem is not here, see the [InstaloaderSharp troubleshooting page](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Troubleshooting-and-FAQ), which covers the downloading itself in more detail.
+Common problems and their solutions. If your problem is not here, see the [InstaloaderSharp troubleshooting page](https://github.com/pzyber/InstaloaderSharp/wiki/Troubleshooting-and-FAQ), which covers the downloading itself in more detail.
 
 ## Contents
 
@@ -26,8 +26,8 @@ The GUI does not download anything itself: it passes your options to Instaloader
 
 | `InstaloaderSharp.exe` shows… | The problem is probably in… | Report it to |
 |---|---|---|
-| the same error or the same wrong result | InstaloaderSharp, or a change on Instagram's side | [InstaloaderSharp issues](https://github.com/InstaloaderSharp/InstaloaderSharp/issues) |
-| no problem | the GUI | [InstaloaderSharp GUI issues](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/issues) |
+| the same error or the same wrong result | InstaloaderSharp, or a change on Instagram's side | [InstaloaderSharp issues](https://github.com/pzyber/InstaloaderSharp/issues) |
+| no problem | the GUI | [InstaloaderSharp GUI issues](https://github.com/pzyber/InstaloaderSharpGUI/issues) |
 
 As a rule of thumb, errors in the output while downloading, missing or wrong files, and sign-in failures usually come from InstaloaderSharp or Instagram. Problems with the window, options without effect, wrong messages before starting, importing command lines, the Activity page and the Look up page usually come from the GUI.
 
@@ -85,7 +85,7 @@ Instagram has flagged the account and asks for a verification. Open instagram.co
 ***Download aborted: Instagram keeps redirecting …*, or endless *HTTP redirect from … to https://www.instagram.com/* lines in the output.**
 Instagram redirects every request of the account, usually because the account is suspended, restricted or signed out. Open Instagram in a web browser with that account and follow the instructions there; a suspended account may have to be appealed. Then sign in again on the Account page, or import fresh browser cookies. With InstaloaderSharp 1.1.0 or later, the download stops by itself with **Download aborted**; older versions follow the redirects forever, so click **Stop**.
 
-See [Rate limits and blocks](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Troubleshooting-and-FAQ#rate-limits-and-blocks) and [Rate limits and connections](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Rate-limits-and-connections) in the InstaloaderSharp manual.
+See [Rate limits and blocks](https://github.com/pzyber/InstaloaderSharp/wiki/Troubleshooting-and-FAQ#rate-limits-and-blocks) and [Rate limits and connections](https://github.com/pzyber/InstaloaderSharp/wiki/Rate-limits-and-connections) in the InstaloaderSharp manual.
 
 ## Profiles and posts
 
@@ -164,7 +164,7 @@ Setting the downloaded file's date failed on the network drive. Use InstaloaderS
 Existing files are only recognized under the names the current pattern gives. Change patterns before the first download, or use **Remember latest downloads**.
 
 **Can I use the same folders with InstaloaderSharp or Instaloader on the command line?**
-Yes. All three write the same files and names; see [Interoperability with Instaloader](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Interoperability-with-Instaloader).
+Yes. All three write the same files and names; see [Interoperability with Instaloader](https://github.com/pzyber/InstaloaderSharp/wiki/Interoperability-with-Instaloader).
 
 ## Updates and resuming
 

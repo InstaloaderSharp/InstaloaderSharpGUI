@@ -1,6 +1,6 @@
 # InstaloaderSharp GUI manual
 
-Welcome to the InstaloaderSharp GUI manual. InstaloaderSharp GUI is a free Windows program with a graphical user interface for [InstaloaderSharp](https://github.com/InstaloaderSharp/InstaloaderSharp). It downloads pictures and videos from Instagram, along with their captions and other metadata: whole profiles, single posts, hashtags, locations, your feed, your saved posts, stories, highlights and reels. You don't need a command line.
+Welcome to the InstaloaderSharp GUI manual. InstaloaderSharp GUI is a free Windows program with a graphical user interface for [InstaloaderSharp](https://github.com/pzyber/InstaloaderSharp). It downloads pictures and videos from Instagram, along with their captions and other metadata: whole profiles, single posts, hashtags, locations, your feed, your saved posts, stories, highlights and reels. You don't need a command line.
 
 Everything InstaloaderSharp's command line can do is available in the program, and every download gives exactly the same result as the matching InstaloaderSharp command. The GUI uses InstaloaderSharp as a library, so it can also offer things the console cannot: live progress, a profile preview, Instagram search, filters that are checked as you type, sign-in with dialogs for passwords and two-factor codes, and a list of saved sessions.
 
@@ -44,8 +44,8 @@ No previous knowledge of InstaloaderSharp or Instaloader is needed. If you are n
 |---|---|
 | [Building and contributing](Building-and-contributing) | Building from source, unit tests, reporting bugs, contributing code |
 | [How it works](How-it-works) | How the GUI drives the InstaloaderSharp library, for contributors and the curious |
-| [Releases](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/releases) | Downloads of each version, and what changed in it |
-| [InstaloaderSharp manual](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki) | The manual of the program that does the downloading: file formats, filter language, name placeholders and more |
+| [Releases](https://github.com/pzyber/InstaloaderSharpGUI/releases) | Downloads of each version, and what changed in it |
+| [InstaloaderSharp manual](https://github.com/pzyber/InstaloaderSharp/wiki) | The manual of the program that does the downloading: file formats, filter language, name placeholders and more |
 
 ## Conventions in this manual
 

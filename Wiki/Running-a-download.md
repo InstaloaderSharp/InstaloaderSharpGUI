@@ -67,7 +67,7 @@ Under **Output** you see the complete output of InstaloaderSharp, exactly as the
 - errors in red,
 - messages from the GUI itself in blue, such as "▶ Starting download into …" and the equivalent command.
 
-What each line means is explained in [Getting started](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Getting-started#your-first-download) in the InstaloaderSharp manual.
+What each line means is explained in [Getting started](https://github.com/pzyber/InstaloaderSharp/wiki/Getting-started#your-first-download) in the InstaloaderSharp manual.
 
 | Control | Does |
 |---|---|
@@ -107,7 +107,7 @@ The status bar and the Activity page show the result:
 | **Could not start** | The options were invalid; a dialog explains why | 2 |
 | **Failed** | An unexpected error; see the output | 99 |
 
-The exit codes are those of `InstaloaderSharp.exe`, see [Exit codes](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Command-line-options#exit-codes).
+The exit codes are those of `InstaloaderSharp.exe`, see [Exit codes](https://github.com/pzyber/InstaloaderSharp/wiki/Command-line-options#exit-codes).
 
 If the window is in the background when the download ends, its taskbar button flashes and a sound plays. This can be turned off with **Notify when finished** (*Settings → Behaviour*). While a download runs, the computer does not go to sleep, unless **Keep the computer awake** is turned off.
 
@@ -121,7 +121,7 @@ When a download of many posts stops early, whether because you stopped it, becau
 - A download can only be resumed with the same account it was started with (or anonymously both times).
 - Resuming can be turned off, and the file names changed, under *Settings → Resuming interrupted downloads*; see the [Settings reference](Settings-reference#resuming-interrupted-downloads).
 
-See [Interrupting and resuming](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Interrupting-and-resuming) in the InstaloaderSharp manual.
+See [Interrupting and resuming](https://github.com/pzyber/InstaloaderSharp/wiki/Interrupting-and-resuming) in the InstaloaderSharp manual.
 
 ## Closing the program during a download
 

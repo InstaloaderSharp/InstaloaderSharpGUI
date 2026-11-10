@@ -1,4 +1,4 @@
-This page is for people who want to build InstaloaderSharp GUI themselves, run its tests, report a bug or contribute. The full guidelines are in [CONTRIBUTING.md](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/blob/main/CONTRIBUTING.md).
+This page is for people who want to build InstaloaderSharp GUI themselves, run its tests, report a bug or contribute. The full guidelines are in [CONTRIBUTING.md](https://github.com/pzyber/InstaloaderSharpGUI/blob/main/CONTRIBUTING.md).
 
 ## Contents
 
@@ -19,12 +19,12 @@ You need:
 
 - Visual Studio 2015 or later, or the MSBuild 14 that comes with it,
 - the .NET Framework 4.8.1 developer pack (reference assemblies),
-- a compiled `InstaloaderSharp.exe`. It is not part of the repository: download it from the [InstaloaderSharp releases](https://github.com/InstaloaderSharp/InstaloaderSharp/releases) (the version named in the README) or [build it](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Building-and-contributing).
+- a compiled `InstaloaderSharp.exe`. It is not part of the repository: download it from the [InstaloaderSharp releases](https://github.com/pzyber/InstaloaderSharp/releases) (the version named in the README) or [build it](https://github.com/pzyber/InstaloaderSharp/wiki/Building-and-contributing).
 
 1. Clone the repository:
 
    ```
-   git clone https://github.com/InstaloaderSharp/InstaloaderSharpGUI.git
+   git clone https://github.com/pzyber/InstaloaderSharpGUI.git
    ```
 
 2. Put `InstaloaderSharp.exe` into the `InstaloaderSharp` folder next to the solution:
@@ -48,7 +48,7 @@ The result is in `InstaloaderSharpGUI\bin\Release\`: `InstaloaderSharpGUI.exe` a
 
 ## Running the unit tests
 
-The solution contains a unit test project, `InstaloaderSharpGUI.Tests` (MSTest). The tests run offline: they make no requests to Instagram, need no account, and never touch your real settings or sessions. They test the GUI's own code and how it uses InstaloaderSharp, not what [InstaloaderSharp's tests](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Building-and-contributing#running-the-unit-tests) already cover:
+The solution contains a unit test project, `InstaloaderSharpGUI.Tests` (MSTest). The tests run offline: they make no requests to Instagram, need no account, and never touch your real settings or sessions. They test the GUI's own code and how it uses InstaloaderSharp, not what [InstaloaderSharp's tests](https://github.com/pzyber/InstaloaderSharp/wiki/Building-and-contributing#running-the-unit-tests) already cover:
 
 | Tests | Cover |
 |---|---|
@@ -84,7 +84,7 @@ See [How it works](How-it-works) for how these parts work together.
 
 ## Reporting bugs
 
-Report bugs in the [issue tracker](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/issues). Many problems shown in the GUI come from InstaloaderSharp or from Instagram, so first check [Is it a GUI problem?](Troubleshooting-and-FAQ#is-it-a-gui-problem) and report the problem to the right project.
+Report bugs in the [issue tracker](https://github.com/pzyber/InstaloaderSharpGUI/issues). Many problems shown in the GUI come from InstaloaderSharp or from Instagram, so first check [Is it a GUI problem?](Troubleshooting-and-FAQ#is-it-a-gui-problem) and report the problem to the right project.
 
 Please include:
 
@@ -100,15 +100,15 @@ Please include:
 
 ## Reporting security issues
 
-Do not open a public issue for a security problem, for example in how passwords, sessions or cookies are handled. Report it privately through the repository's [Security tab](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/security) ("Report a vulnerability").
+Do not open a public issue for a security problem, for example in how passwords, sessions or cookies are handled. Report it privately through the repository's [Security tab](https://github.com/pzyber/InstaloaderSharpGUI/security) ("Report a vulnerability").
 
 ## Suggesting features and asking questions
 
-Feature requests and questions are welcome as [issues](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/issues/new). Features of the user interface belong here. New download features or options must exist in InstaloaderSharp first; request them in the [InstaloaderSharp repository](https://github.com/InstaloaderSharp/InstaloaderSharp/issues). Features that act on Instagram (liking, following, posting) are out of scope.
+Feature requests and questions are welcome as [issues](https://github.com/pzyber/InstaloaderSharpGUI/issues/new). Features of the user interface belong here. New download features or options must exist in InstaloaderSharp first; request them in the [InstaloaderSharp repository](https://github.com/pzyber/InstaloaderSharp/issues). Features that act on Instagram (liking, following, posting) are out of scope.
 
 ## Contributing code
 
-Fork the repository, create a branch from `main`, make your change, and open a pull request. For larger changes, open an issue first. The main rules from [CONTRIBUTING.md](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/blob/main/CONTRIBUTING.md#project-guidelines):
+Fork the repository, create a branch from `main`, make your change, and open a pull request. For larger changes, open an issue first. The main rules from [CONTRIBUTING.md](https://github.com/pzyber/InstaloaderSharpGUI/blob/main/CONTRIBUTING.md#project-guidelines):
 
 - C# 6 and .NET Framework 4.8.1, compiled with Visual Studio 2015 / MSBuild 14; no newer language features.
 - No NuGet packages or other dependencies.
@@ -134,4 +134,4 @@ When a new InstaloaderSharp version is released:
 
 ## Editing this wiki
 
-The pages of this wiki are kept in the repository's [`Wiki` folder](https://github.com/InstaloaderSharp/InstaloaderSharpGUI/tree/main/Wiki), one Markdown file per page, with `_Sidebar.md` as the navigation. Improvements are welcome as pull requests like any other change. Links between pages use the page name without `.md`, for example `[Signing in](Signing-in)`. Topics that work the same as in InstaloaderSharp, such as file formats, the filter language and name placeholders, link to the [InstaloaderSharp manual](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki) instead of repeating it.
+The pages of this wiki are kept in the repository's [`Wiki` folder](https://github.com/pzyber/InstaloaderSharpGUI/tree/main/Wiki), one Markdown file per page, with `_Sidebar.md` as the navigation. Improvements are welcome as pull requests like any other change. Links between pages use the page name without `.md`, for example `[Signing in](Signing-in)`. Topics that work the same as in InstaloaderSharp, such as file formats, the filter language and name placeholders, link to the [InstaloaderSharp manual](https://github.com/pzyber/InstaloaderSharp/wiki) instead of repeating it.

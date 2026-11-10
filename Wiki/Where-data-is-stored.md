@@ -38,7 +38,7 @@ It is saved when a download starts and when the program closes, and read when th
 
 ## Sessions
 
-A session file contains the login cookie of an account. It is created by **Sign in** and **Import cookies** on the Account page, and updated after downloads. The GUI, `InstaloaderSharp.exe` and Instaloader use the same files, in the same format (see [Session files](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/File-formats#session-files) in the InstaloaderSharp manual).
+A session file contains the login cookie of an account. It is created by **Sign in** and **Import cookies** on the Account page, and updated after downloads. The GUI, `InstaloaderSharp.exe` and Instaloader use the same files, in the same format (see [Session files](https://github.com/pzyber/InstaloaderSharp/wiki/File-formats#session-files) in the InstaloaderSharp manual).
 
 The **Saved sessions** list on the Account page shows the session files in the default folder, and **Delete** or **Sign out** removes them. See [Signing in](Signing-in#saved-sessions).
 
@@ -46,7 +46,7 @@ The **Saved sessions** list on the Account page shows the session files in the d
 
 ## The latest-stamps file
 
-With **Remember latest downloads** on, the time of the newest downloaded item of each profile is stored in the stamps file. See [Keeping an archive up to date](Keeping-an-archive-up-to-date#remember-latest-downloads) and [Latest-stamps file](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/File-formats#latest-stamps-file).
+With **Remember latest downloads** on, the time of the newest downloaded item of each profile is stored in the stamps file. See [Keeping an archive up to date](Keeping-an-archive-up-to-date#remember-latest-downloads) and [Latest-stamps file](https://github.com/pzyber/InstaloaderSharp/wiki/File-formats#latest-stamps-file).
 
 ## Files in the download folder
 
@@ -58,7 +58,7 @@ Besides pictures, videos, captions and metadata, the download folder may contain
 | `iterator_XXXXXXXX.json.xz` | A resume file of an interrupted download; see [Running a download](Running-a-download#stopping-and-resuming) |
 | `*.temp` | A file that was being downloaded; it is renamed when complete |
 
-See [Downloaded files](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/Downloaded-files) and [File formats](https://github.com/InstaloaderSharp/InstaloaderSharp/wiki/File-formats) in the InstaloaderSharp manual.
+See [Downloaded files](https://github.com/pzyber/InstaloaderSharp/wiki/Downloaded-files) and [File formats](https://github.com/pzyber/InstaloaderSharp/wiki/File-formats) in the InstaloaderSharp manual.
 
 ## What is never saved
 
