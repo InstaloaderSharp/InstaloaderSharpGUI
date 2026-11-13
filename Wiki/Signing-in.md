@@ -132,6 +132,7 @@ See [Keeping your account safe](https://github.com/pzyber/InstaloaderSharp/wiki/
 |---|---|
 | The password is not accepted, although it is correct | Make sure you entered your username, not your e-mail address. If Instagram refuses anyway, use your browser's login. |
 | *Checkpoint required. Point your browser to …* | Instagram wants to confirm that it is you. Open the link in a browser where you are signed in to the same account, confirm, and try again, or use your browser's login. |
+| *Instagram asks to verify the account: it redirected … to its verification page* | The session is valid, but Instagram wants the account verified first. Open instagram.com in a browser signed in with the account, complete the verification there, and try again later. Needs InstaloaderSharp 1.1.5 or later; older versions report the session as not signed in. |
 | Importing browser cookies fails, or finds no cookies | Close the browser and try again, use Firefox, and check that you are signed in to instagram.com in that browser. For a non-default browser profile, choose its **Cookie file**. |
 | It imports the wrong account | The browser's default profile is signed in to another account. Sign in with the right account there, or choose the right **Cookie file**. |
 | The session stopped working | Sign in again, or import fresh cookies. |

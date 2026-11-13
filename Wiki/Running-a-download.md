@@ -103,7 +103,7 @@ The status bar and the Activity page show the result:
 | **Completed with N problem(s)** | Finished, but errors or warnings occurred; see the output | 1 |
 | **Stopped. Start again to resume where it left off.** | You clicked **Stop** | 5 |
 | **Download aborted** | Instagram stopped the download, for example because of **Abort on HTTP status codes**, because it requires verification (for example a captcha), or because it keeps redirecting a suspended or restricted account (see [Troubleshooting and FAQ](Troubleshooting-and-FAQ#rate-limits-and-blocks)) | 4 |
-| **Login failed** | Signing in did not work; a dialog explains why | 3 |
+| **Login failed** | Signing in did not work, for example because Instagram wants the account verified; a dialog explains why | 3 |
 | **Could not start** | The options were invalid; a dialog explains why | 2 |
 | **Failed** | An unexpected error; see the output | 99 |
 

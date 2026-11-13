@@ -56,6 +56,9 @@ Enter your Instagram username on the Account page, not your e-mail address or ph
 ***Checkpoint required. Point your browser to …***
 Instagram wants to confirm that it is you. Open the link in a browser where you are signed in to the same account, follow the instructions, and try again. Or use **Browser cookies**.
 
+***Instagram asks to verify the account: it redirected … to its verification page***
+The session is valid, but Instagram wants the account verified before it answers further requests. Open instagram.com in a web browser signed in with the account and complete the verification there; the program cannot do it for you. Then let the account rest for a while before downloading again. The message appears when signing in, importing cookies or checking the session, and a download then ends with **Login failed**; when Instagram asks during a download, it ends with **Download aborted**, and the position is saved. Older versions of InstaloaderSharp report the session as not signed in instead: **Check session** says that there is no valid session, and a download asks for the password. Use InstaloaderSharp 1.1.5 or later.
+
 **Importing browser cookies finds no cookies, or is not signed in.**
 Sign in to instagram.com in that browser first. Close Chromium-based browsers (Chrome, Edge, Brave, Opera, Vivaldi) before importing. Recent Chrome versions encrypt cookies so that only Chrome can read them; use Firefox or LibreWolf.
 
